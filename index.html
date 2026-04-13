@@ -1,1 +1,3618 @@
 
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://yourwebsite.com/" />
+    <meta property="og:title" content="Travel Company" />
+    <meta
+      property="og:description"
+      content="Best travel services for Dubai and worldwide trips."
+    />
+    <meta
+      property="og:image"
+      content="https://www.designmantic.com/logo-images/10161.png?company=Company%20Name&keyword=travel&slogan=&verify=1"
+    />
+
+    <!-- Optional but useful -->
+    <meta property="og:site_name" content="Travel Company" />
+    <title>Mega Tours — Pakistan's Premier Travel Experience</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=DM+Sans:wght@300;400;500;600&family=Cinzel:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://www.designmantic.com/logo-images/10161.png?company=Company%20Name&keyword=travel&slogan=&verify=1"
+    />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              forest: {
+                950: "#0b1a0f",
+                900: "#112214",
+                800: "#183320",
+                700: "#1f4428",
+                600: "#265530",
+                500: "#2d6638",
+                400: "#3d8a4c",
+                300: "#5aad67",
+                200: "#8fd49b",
+                100: "#c8eecf",
+              },
+              gold: {
+                950: "#1a1000",
+                900: "#2e1e00",
+                800: "#4d3300",
+                700: "#704b00",
+                600: "#966400",
+                500: "#bf8000",
+                400: "#e09b00",
+                300: "#f5b800",
+                200: "#ffd35c",
+                100: "#fff0b8",
+              },
+            },
+            fontFamily: {
+              display: ["Cinzel", "serif"],
+              serif: ["Cormorant Garamond", "Georgia", "serif"],
+              sans: ["DM Sans", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      :root {
+        --forest: #183320;
+        --forest-light: #265530;
+        --gold: #bf8000;
+        --gold-light: #f5b800;
+        --cream: #faf6ee;
+        --dark: #0b1a0f;
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        background: var(--cream);
+        color: #1a1a1a;
+        font-family: "DM Sans", sans-serif;
+        overflow-x: hidden;
+      }
+
+      /* ========= PAGE SYSTEM ========= */
+      .page {
+        display: none;
+        animation: fadeInPage 0.6s ease forwards;
+      }
+      .page.active {
+        display: block;
+      }
+      @keyframes fadeInPage {
+        from {
+          opacity: 0;
+          transform: translateY(16px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      /* ========= NAVBAR ========= */
+      #navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+        transition: all 0.4s ease;
+      }
+      #navbar.scrolled {
+        background: rgba(11, 26, 15, 0.97);
+        backdrop-filter: blur(12px);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
+      }
+      #navbar.light-nav {
+        background: rgba(11, 26, 15, 0.97);
+      }
+      .nav-link {
+        font-family: "DM Sans", sans-serif;
+        font-weight: 500;
+        font-size: 0.82rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        transition: color 0.2s;
+      }
+      .nav-link:hover,
+      .nav-link.active {
+        color: var(--gold-light);
+      }
+
+      /* ========= HERO ========= */
+      .hero-section {
+        position: relative;
+        height: 100vh;
+        min-height: 700px;
+        overflow: hidden;
+      }
+      .hero-bg {
+        position: absolute;
+        inset: 0;
+        background-size: cover;
+        background-position: center;
+        transition: opacity 1.2s ease;
+      }
+      .hero-overlay {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          to bottom,
+          rgba(11, 26, 15, 0.45) 0%,
+          rgba(11, 26, 15, 0.2) 40%,
+          rgba(11, 26, 15, 0.7) 100%
+        );
+      }
+      .hero-content {
+        position: relative;
+        z-index: 10;
+      }
+
+      .hero-title {
+        font-family: "Cinzel", serif;
+        font-weight: 700;
+        line-height: 1.05;
+        text-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+      }
+      .hero-subtitle {
+        font-family: "Cormorant Garamond", serif;
+        font-weight: 300;
+        font-style: italic;
+        text-shadow: 0 2px 12px rgba(0, 0, 0, 0.4);
+      }
+
+      /* Slideshow */
+      .slide {
+        position: absolute;
+        inset: 0;
+        background-size: cover;
+        background-position: center;
+        opacity: 0;
+        transition: opacity 1.5s ease;
+      }
+      .slide.active {
+        opacity: 1;
+      }
+
+      /* ========= SECTION TITLES ========= */
+      .section-label {
+        font-family: "DM Sans", sans-serif;
+        font-size: 0.72rem;
+        letter-spacing: 0.25em;
+        text-transform: uppercase;
+        color: var(--gold);
+        font-weight: 600;
+      }
+      .section-title {
+        font-family: "Cinzel", serif;
+        font-weight: 600;
+      }
+      .section-serif {
+        font-family: "Cormorant Garamond", serif;
+      }
+
+      /* ========= CARDS ========= */
+      .tour-card {
+        background: #fff;
+        border-radius: 16px;
+        overflow: hidden;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.07);
+        transition:
+          transform 0.35s ease,
+          box-shadow 0.35s ease;
+        cursor: pointer;
+      }
+      .tour-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 20px 50px rgba(11, 26, 15, 0.18);
+      }
+      .tour-card img {
+        width: 100%;
+        height: 240px;
+        object-fit: cover;
+        transition: transform 0.5s ease;
+      }
+      .tour-card:hover img {
+        transform: scale(1.05);
+      }
+
+      .dest-card {
+        position: relative;
+        border-radius: 16px;
+        overflow: hidden;
+        cursor: pointer;
+      }
+      .dest-card img {
+        width: 100%;
+        height: 320px;
+        object-fit: cover;
+        transition: transform 0.5s ease;
+        display: block;
+      }
+      .dest-card:hover img {
+        transform: scale(1.08);
+      }
+      .dest-overlay {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          to top,
+          rgba(11, 26, 15, 0.85) 0%,
+          transparent 55%
+        );
+      }
+      .dest-card:hover .dest-overlay {
+        background: linear-gradient(
+          to top,
+          rgba(11, 26, 15, 0.92) 0%,
+          rgba(11, 26, 15, 0.1) 55%
+        );
+      }
+
+      /* ========= BADGE ========= */
+      .badge {
+        display: inline-block;
+        font-size: 0.7rem;
+        font-weight: 600;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        padding: 4px 12px;
+        border-radius: 100px;
+      }
+      .badge-gold {
+        background: var(--gold-light);
+        color: #1a1000;
+      }
+      .badge-green {
+        background: var(--forest);
+        color: #fff;
+      }
+      .badge-outline {
+        border: 1px solid var(--gold);
+        color: var(--gold);
+        background: transparent;
+      }
+
+      /* ========= BUTTON ========= */
+      .btn-primary {
+        background: linear-gradient(135deg, #bf8000, #f5b800);
+        color: #1a1000;
+        font-weight: 600;
+        font-size: 0.82rem;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        padding: 14px 36px;
+        border-radius: 8px;
+        border: none;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        display: inline-block;
+        font-family: "DM Sans", sans-serif;
+      }
+      .btn-primary:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 30px rgba(191, 128, 0, 0.4);
+        filter: brightness(1.05);
+      }
+      .btn-outline {
+        background: transparent;
+        color: #fff;
+        font-weight: 600;
+        font-size: 0.82rem;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        padding: 13px 36px;
+        border-radius: 8px;
+        border: 2px solid rgba(255, 255, 255, 0.6);
+        cursor: pointer;
+        transition: all 0.3s ease;
+        display: inline-block;
+        font-family: "DM Sans", sans-serif;
+      }
+      .btn-outline:hover {
+        border-color: var(--gold-light);
+        color: var(--gold-light);
+        transform: translateY(-2px);
+      }
+      .btn-dark {
+        background: var(--forest);
+        color: #fff;
+        font-weight: 600;
+        font-size: 0.82rem;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        padding: 14px 36px;
+        border-radius: 8px;
+        border: none;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        display: inline-block;
+        font-family: "DM Sans", sans-serif;
+      }
+      .btn-dark:hover {
+        background: var(--forest-light);
+        transform: translateY(-2px);
+        box-shadow: 0 10px 30px rgba(11, 26, 15, 0.3);
+      }
+
+      /* ========= STATS BAR ========= */
+      .stats-bar {
+        background: var(--dark);
+      }
+
+      /* ========= TESTIMONIAL ========= */
+      .testimonial-card {
+        background: #fff;
+        border-radius: 16px;
+        padding: 32px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+        border-left: 4px solid var(--gold);
+      }
+
+      /* ========= CONTACT FORM ========= */
+      .form-input {
+        width: 100%;
+        padding: 14px 18px;
+        border: 1.5px solid #e0ddd6;
+        border-radius: 10px;
+        font-family: "DM Sans", sans-serif;
+        font-size: 0.9rem;
+        background: #fff;
+        transition: border-color 0.2s;
+        outline: none;
+        color: #1a1a1a;
+      }
+      .form-input:focus {
+        border-color: var(--gold);
+      }
+      .form-label {
+        font-size: 0.8rem;
+        font-weight: 600;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        color: #555;
+        margin-bottom: 6px;
+        display: block;
+      }
+
+      /* ========= FOOTER ========= */
+      footer {
+        background: var(--dark);
+      }
+
+      /* ========= SCROLL ANIMATIONS ========= */
+      .reveal {
+        opacity: 0;
+        transform: translateY(32px);
+        transition:
+          opacity 0.7s ease,
+          transform 0.7s ease;
+      }
+      .reveal.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      /* ========= HERO SEARCH BAR ========= */
+      .search-bar {
+        background: rgba(255, 255, 255, 0.97);
+        border-radius: 12px;
+        backdrop-filter: blur(8px);
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+      }
+
+      /* ========= PATTERN ========= */
+      .pattern-bg {
+        background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23265530' fill-opacity='0.07'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      }
+
+      /* Divider */
+      .gold-divider {
+        height: 2px;
+        background: linear-gradient(
+          to right,
+          transparent,
+          var(--gold),
+          transparent
+        );
+      }
+
+      /* Mobile menu */
+      #mobile-menu {
+        display: none;
+        background: rgba(11, 26, 15, 0.99);
+      }
+      #mobile-menu.open {
+        display: block;
+      }
+
+      /* Package ribbon */
+      .ribbon {
+        position: absolute;
+        top: 16px;
+        right: -4px;
+        background: linear-gradient(135deg, var(--gold), var(--gold-light));
+        color: #1a1000;
+        font-size: 0.68rem;
+        font-weight: 700;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        padding: 5px 14px;
+        border-radius: 4px 0 0 4px;
+        box-shadow: -2px 2px 8px rgba(0, 0, 0, 0.2);
+      }
+      .ribbon::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        bottom: -8px;
+        border: 4px solid transparent;
+        border-left-color: #8a5c00;
+        border-top-color: #8a5c00;
+      }
+
+      /* Star rating */
+      .stars {
+        color: var(--gold-light);
+        letter-spacing: 1px;
+      }
+
+      /* Feature icon */
+      .feature-icon {
+        width: 56px;
+        height: 56px;
+        background: linear-gradient(135deg, var(--forest), var(--forest-light));
+        border-radius: 14px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5rem;
+        flex-shrink: 0;
+      }
+
+      /* Gallery grid */
+      .gallery-item {
+        overflow: hidden;
+        border-radius: 12px;
+        cursor: pointer;
+      }
+      .gallery-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s ease;
+        display: block;
+      }
+      .gallery-item:hover img {
+        transform: scale(1.08);
+      }
+
+      /* Lightbox */
+      #lightbox {
+        display: none;
+        position: fixed;
+        inset: 0;
+        z-index: 9999;
+        background: rgba(0, 0, 0, 0.94);
+        align-items: center;
+        justify-content: center;
+      }
+      #lightbox.open {
+        display: flex;
+      }
+      #lightbox img {
+        max-width: 90vw;
+        max-height: 85vh;
+        border-radius: 8px;
+        box-shadow: 0 0 80px rgba(0, 0, 0, 0.8);
+      }
+
+      /* Counter animation */
+      @keyframes countUp {
+        from {
+          opacity: 0;
+          transform: translateY(10px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      /* Page hero for sub-pages */
+      .page-hero {
+        height: 420px;
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        align-items: flex-end;
+        padding-bottom: 60px;
+        position: relative;
+        margin-top: 72px;
+      }
+      .page-hero-overlay {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          to bottom,
+          rgba(11, 26, 15, 0.3) 0%,
+          rgba(11, 26, 15, 0.75) 100%
+        );
+      }
+
+      /* Accordion */
+      .faq-item {
+        border-bottom: 1px solid #e5e1d8;
+      }
+      .faq-question {
+        width: 100%;
+        text-align: left;
+        padding: 20px 0;
+        font-family: "DM Sans", sans-serif;
+        font-weight: 500;
+        font-size: 0.95rem;
+        background: none;
+        border: none;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: #1a1a1a;
+      }
+      .faq-answer {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease;
+        font-size: 0.9rem;
+        color: #555;
+        line-height: 1.7;
+      }
+      .faq-answer.open {
+        max-height: 200px;
+      }
+      .faq-icon {
+        transition: transform 0.3s ease;
+        font-size: 1.2rem;
+        color: var(--gold);
+        flex-shrink: 0;
+      }
+      .faq-item.open .faq-icon {
+        transform: rotate(45deg);
+      }
+
+      /* Timeline */
+      .timeline-item {
+        position: relative;
+        padding-left: 40px;
+      }
+      .timeline-item::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 6px;
+        width: 14px;
+        height: 14px;
+        background: var(--gold);
+        border-radius: 50%;
+        box-shadow: 0 0 0 4px rgba(191, 128, 0, 0.2);
+      }
+      .timeline-item::after {
+        content: "";
+        position: absolute;
+        left: 6px;
+        top: 20px;
+        bottom: -20px;
+        width: 2px;
+        background: linear-gradient(to bottom, var(--gold), transparent);
+      }
+      .timeline-item:last-child::after {
+        display: none;
+      }
+
+      /* Notification toast */
+      #toast {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        z-index: 9000;
+        background: var(--forest);
+        color: #fff;
+        padding: 16px 24px;
+        border-radius: 10px;
+        font-size: 0.88rem;
+        font-weight: 500;
+        transform: translateY(100px);
+        opacity: 0;
+        transition: all 0.4s ease;
+        border-left: 4px solid var(--gold-light);
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+      }
+      #toast.show {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- ================= NAVBAR ================= -->
+    <nav id="navbar" class="light-nav">
+      <div
+        class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between"
+      >
+        <!-- Logo -->
+        <button
+          onclick="showPage('home')"
+          class="flex items-center gap-3 group"
+        >
+          <div
+            class="w-10 h-10 rounded-full bg-gradient-to-br from-gold-300 to-gold-500 flex items-center justify-center text-forest-950 font-display font-bold text-lg shadow-lg"
+          >
+            M
+          </div>
+          <div class="text-left">
+            <div
+              class="font-display text-white text-lg font-semibold tracking-wider leading-none"
+            >
+              MEGA TOURS
+            </div>
+            <div
+              class="text-gold-300 text-xs tracking-widest leading-none mt-0.5"
+              style="
+                font-family: &quot;DM Sans&quot;, sans-serif;
+                font-weight: 400;
+              "
+            >
+              PAKISTAN
+            </div>
+          </div>
+        </button>
+
+        <!-- Desktop Nav -->
+        <div class="hidden md:flex items-center gap-8">
+          <button
+            onclick="showPage('home')"
+            class="nav-link text-white"
+            id="nav-home"
+          >
+            Home
+          </button>
+          <button
+            onclick="showPage('tours')"
+            class="nav-link text-white"
+            id="nav-tours"
+          >
+            Tours
+          </button>
+          <button
+            onclick="showPage('destinations')"
+            class="nav-link text-white"
+            id="nav-destinations"
+          >
+            Destinations
+          </button>
+          <button
+            onclick="showPage('gallery')"
+            class="nav-link text-white"
+            id="nav-gallery"
+          >
+            Gallery
+          </button>
+          <button
+            onclick="showPage('about')"
+            class="nav-link text-white"
+            id="nav-about"
+          >
+            About
+          </button>
+          <button
+            onclick="showPage('contact')"
+            class="nav-link text-white"
+            id="nav-contact"
+          >
+            Contact
+          </button>
+        </div>
+
+        <!-- CTA -->
+        <div class="hidden md:flex items-center gap-4">
+          <span class="text-white/70 text-sm">📞 +92 300 1234567</span>
+          <button
+            onclick="showPage('contact')"
+            class="btn-primary text-xs py-2.5 px-5"
+          >
+            Book Now
+          </button>
+        </div>
+
+        <!-- Hamburger -->
+        <button
+          onclick="toggleMobile()"
+          class="md:hidden text-white text-2xl"
+          id="hamburger"
+        >
+          ☰
+        </button>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div id="mobile-menu">
+        <div class="px-6 py-4 flex flex-col gap-4">
+          <button
+            onclick="
+              showPage('home');
+              toggleMobile();
+            "
+            class="nav-link text-white text-left py-2"
+          >
+            Home
+          </button>
+          <button
+            onclick="
+              showPage('tours');
+              toggleMobile();
+            "
+            class="nav-link text-white text-left py-2"
+          >
+            Tours
+          </button>
+          <button
+            onclick="
+              showPage('destinations');
+              toggleMobile();
+            "
+            class="nav-link text-white text-left py-2"
+          >
+            Destinations
+          </button>
+          <button
+            onclick="
+              showPage('gallery');
+              toggleMobile();
+            "
+            class="nav-link text-white text-left py-2"
+          >
+            Gallery
+          </button>
+          <button
+            onclick="
+              showPage('about');
+              toggleMobile();
+            "
+            class="nav-link text-white text-left py-2"
+          >
+            About
+          </button>
+          <button
+            onclick="
+              showPage('contact');
+              toggleMobile();
+            "
+            class="nav-link text-white text-left py-2"
+          >
+            Contact
+          </button>
+          <button
+            onclick="
+              showPage('contact');
+              toggleMobile();
+            "
+            class="btn-primary mt-2"
+          >
+            Book Now
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ================= TOAST ================= -->
+    <div id="toast">✓ Message sent! We'll contact you within 24 hours.</div>
+
+    <!-- ================= LIGHTBOX ================= -->
+    <div id="lightbox" onclick="closeLightbox()">
+      <button
+        onclick="closeLightbox()"
+        style="
+          position: absolute;
+          top: 20px;
+          right: 30px;
+          color: #fff;
+          font-size: 2rem;
+          background: none;
+          border: none;
+          cursor: pointer;
+        "
+      >
+        ✕
+      </button>
+      <img id="lightbox-img" src="" alt="Gallery" />
+    </div>
+
+    <!-- ========================= HOME PAGE ========================= -->
+    <div id="page-home" class="page active">
+      <!-- HERO -->
+      <section class="hero-section">
+        <div
+          class="slide active"
+          style="
+            background-image: url(&quot;https://images.unsplash.com/photo-1609198092458-38a293c7ac4b?w=1600&q=80&quot;);
+          "
+        ></div>
+        <div
+          class="slide"
+          style="
+            background-image: url(&quot;https://images.unsplash.com/photo-1586500036706-41963de24d8b?w=1600&q=80&quot;);
+          "
+        ></div>
+        <div
+          class="slide"
+          style="
+            background-image: url(&quot;https://images.unsplash.com/photo-1703182186928-c536061bf1b6?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&quot;);
+          "
+        ></div>
+        <div
+          class="slide"
+          style="
+            background-image: url(&quot;https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1600&q=80&quot;);
+          "
+        ></div>
+
+        <div class="hero-overlay"></div>
+
+        <div
+          class="hero-content w-full h-full flex flex-col justify-center items-center text-center text-white px-6"
+        >
+          <div class="section-label text-gold-300 mb-4 reveal visible">
+            Pakistan's Most Trusted Travel Company
+          </div>
+          <h1
+            class="hero-title text-5xl md:text-7xl lg:text-8xl text-white mb-4 max-w-5xl reveal visible"
+          >
+            Discover the<br /><span style="color: var(--gold-light)"
+              >Soul of Pakistan</span
+            >
+          </h1>
+          <p
+            class="hero-subtitle text-xl md:text-2xl text-white/85 max-w-2xl mb-10 reveal visible"
+          >
+            From the glaciers of Karakoram to the ancient streets of Lahore —
+            extraordinary journeys await.
+          </p>
+          <div class="flex flex-wrap gap-4 justify-center mb-14 reveal visible">
+            <button onclick="showPage('tours')" class="btn-primary">
+              Explore Tours
+            </button>
+            <button onclick="showPage('destinations')" class="btn-outline">
+              View Destinations
+            </button>
+          </div>
+
+          <!-- Search Bar -->
+          <div class="search-bar w-full max-w-4xl p-4 md:p-5 reveal visible">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-3">
+              <div>
+                <label class="form-label text-gray-600">Destination</label>
+                <select class="form-input">
+                  <option>Hunza Valley</option>
+                  <option>Lahore</option>
+                  <option>Skardu</option>
+                  <option>Swat Valley</option>
+                  <option>Fairy Meadows</option>
+                  <option>Murree</option>
+                  <option>Peshawar</option>
+                  <option>Mohenjo-Daro</option>
+                </select>
+              </div>
+              <div>
+                <label class="form-label text-gray-600">Departure Date</label>
+                <input type="date" class="form-input" />
+              </div>
+              <div>
+                <label class="form-label text-gray-600">Duration</label>
+                <select class="form-input">
+                  <option>3 Days</option>
+                  <option>5 Days</option>
+                  <option>7 Days</option>
+                  <option>10 Days</option>
+                  <option>14 Days</option>
+                </select>
+              </div>
+              <div class="flex items-end">
+                <button
+                  class="btn-primary w-full py-3.5"
+                  onclick="showPage('tours')"
+                >
+                  Search Tours
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide indicators -->
+        <div
+          class="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2 z-20"
+          id="slide-dots"
+        ></div>
+      </section>
+
+      <!-- STATS BAR -->
+      <div class="stats-bar py-8">
+        <div
+          class="max-w-6xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-6 text-center text-white"
+        >
+          <div>
+            <div class="text-3xl font-display font-bold text-gold-300">
+              5000+
+            </div>
+            <div
+              class="text-sm text-white/60 mt-1 tracking-wide uppercase"
+              style="font-size: 0.72rem"
+            >
+              Happy Travelers
+            </div>
+          </div>
+          <div>
+            <div class="text-3xl font-display font-bold text-gold-300">
+              120+
+            </div>
+            <div
+              class="text-sm text-white/60 mt-1 tracking-wide uppercase"
+              style="font-size: 0.72rem"
+            >
+              Tour Packages
+            </div>
+          </div>
+          <div>
+            <div class="text-3xl font-display font-bold text-gold-300">15</div>
+            <div
+              class="text-sm text-white/60 mt-1 tracking-wide uppercase"
+              style="font-size: 0.72rem"
+            >
+              Years Experience
+            </div>
+          </div>
+          <div>
+            <div class="text-3xl font-display font-bold text-gold-300">50+</div>
+            <div
+              class="text-sm text-white/60 mt-1 tracking-wide uppercase"
+              style="font-size: 0.72rem"
+            >
+              Destinations
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- FEATURED TOURS -->
+      <section class="py-24 px-6 pattern-bg">
+        <div class="max-w-7xl mx-auto">
+          <div class="text-center mb-14 reveal">
+            <div class="section-label mb-3">Handpicked Experiences</div>
+            <h2 class="section-title text-4xl md:text-5xl text-forest-900 mb-4">
+              Featured Tour Packages
+            </h2>
+            <div class="gold-divider w-24 mx-auto mt-6"></div>
+            <p
+              class="section-serif text-xl text-gray-600 mt-6 max-w-xl mx-auto italic"
+            >
+              Thoughtfully curated journeys through Pakistan's most breathtaking
+              landscapes and heritage sites
+            </p>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Card 1 -->
+            <div class="tour-card reveal" onclick="showPage('tours')">
+              <div class="relative overflow-hidden">
+                <img
+                  src="https://images.unsplash.com/photo-1609198092458-38a293c7ac4b?w=800&q=80"
+                  alt="Hunza Valley"
+                />
+                <div class="ribbon">Best Seller</div>
+                <div class="absolute bottom-3 left-3">
+                  <span class="badge badge-gold">7 Days</span>
+                </div>
+              </div>
+              <div class="p-6">
+                <div class="flex justify-between items-start mb-2">
+                  <h3
+                    class="font-display font-semibold text-lg text-forest-900"
+                  >
+                    Hunza Valley Explorer
+                  </h3>
+                  <div class="stars text-sm">★★★★★</div>
+                </div>
+                <p class="text-gray-500 text-sm mb-4 leading-relaxed">
+                  Discover the jewel of Karakoram — turquoise lakes, ancient
+                  forts, and snow-capped peaks.
+                </p>
+                <div class="flex flex-wrap gap-2 mb-5 text-xs text-gray-500">
+                  <span>✈️ Flight Included</span><span>•</span
+                  ><span>🏨 4-Star Hotels</span><span>•</span
+                  ><span>🚌 Transport</span>
+                </div>
+                <div class="flex items-center justify-between">
+                  <div>
+                    <span class="text-xs text-gray-400 line-through"
+                      >PKR 145,000</span
+                    ><br /><span class="text-2xl font-bold text-forest-700"
+                      >PKR 120,000</span
+                    ><span class="text-xs text-gray-400">/person</span>
+                  </div>
+                  <button class="btn-primary text-xs py-2.5 px-5">
+                    Book Now
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="tour-card reveal" onclick="showPage('tours')">
+              <div class="relative overflow-hidden">
+                <img
+                  src="https://images.unsplash.com/photo-1586500036706-41963de24d8b?w=800&q=80"
+                  alt="K2 Base Camp"
+                />
+                <div
+                  class="ribbon"
+                  style="
+                    background: linear-gradient(135deg, #183320, #265530);
+                    color: #fff;
+                  "
+                >
+                  Adventure
+                </div>
+                <div class="absolute bottom-3 left-3">
+                  <span class="badge badge-green">10 Days</span>
+                </div>
+              </div>
+              <div class="p-6">
+                <div class="flex justify-between items-start mb-2">
+                  <h3
+                    class="font-display font-semibold text-lg text-forest-900"
+                  >
+                    K2 Base Camp Trek
+                  </h3>
+                  <div class="stars text-sm">★★★★★</div>
+                </div>
+                <p class="text-gray-500 text-sm mb-4 leading-relaxed">
+                  Trek to the base of the world's second highest peak — a
+                  once-in-a-lifetime adventure.
+                </p>
+                <div class="flex flex-wrap gap-2 mb-5 text-xs text-gray-500">
+                  <span>🧗 Expert Guide</span><span>•</span
+                  ><span>⛺ Camping Gear</span><span>•</span
+                  ><span>🍽️ Meals</span>
+                </div>
+                <div class="flex items-center justify-between">
+                  <div>
+                    <span class="text-xs text-gray-400 line-through"
+                      >PKR 280,000</span
+                    ><br /><span class="text-2xl font-bold text-forest-700"
+                      >PKR 240,000</span
+                    ><span class="text-xs text-gray-400">/person</span>
+                  </div>
+                  <button class="btn-primary text-xs py-2.5 px-5">
+                    Book Now
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="tour-card reveal" onclick="showPage('tours')">
+              <div class="relative overflow-hidden">
+                <img
+                  src="https://images.unsplash.com/photo-1603491656337-3b491147917c?q=80&w=1176&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D?w=800&q=80"
+                  alt="Lahore Heritage"
+                />
+                <div class="absolute bottom-3 left-3">
+                  <span class="badge badge-gold">5 Days</span>
+                </div>
+              </div>
+              <div class="p-6">
+                <div class="flex justify-between items-start mb-2">
+                  <h3
+                    class="font-display font-semibold text-lg text-forest-900"
+                  >
+                    Lahore Heritage Trail
+                  </h3>
+                  <div class="stars text-sm">★★★★☆</div>
+                </div>
+                <p class="text-gray-500 text-sm mb-4 leading-relaxed">
+                  Immerse yourself in Mughal splendor — the Lahore Fort,
+                  Badshahi Mosque, and Food Street.
+                </p>
+                <div class="flex flex-wrap gap-2 mb-5 text-xs text-gray-500">
+                  <span>🏛️ Heritage Sites</span><span>•</span
+                  ><span>🍛 Food Tours</span><span>•</span
+                  ><span>🏨 Luxury Stay</span>
+                </div>
+                <div class="flex items-center justify-between">
+                  <div>
+                    <span class="text-xs text-gray-400 line-through"
+                      >PKR 85,000</span
+                    ><br /><span class="text-2xl font-bold text-forest-700"
+                      >PKR 70,000</span
+                    ><span class="text-xs text-gray-400">/person</span>
+                  </div>
+                  <button class="btn-primary text-xs py-2.5 px-5">
+                    Book Now
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="text-center mt-12 reveal">
+            <button onclick="showPage('tours')" class="btn-dark">
+              View All 120+ Packages →
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- DESTINATIONS PREVIEW -->
+      <section class="py-24 px-6 bg-white">
+        <div class="max-w-7xl mx-auto">
+          <div class="text-center mb-14 reveal">
+            <div class="section-label mb-3">Explore Pakistan</div>
+            <h2 class="section-title text-4xl md:text-5xl text-forest-900">
+              Top Destinations
+            </h2>
+            <div class="gold-divider w-24 mx-auto mt-6"></div>
+          </div>
+          <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
+            <div
+              class="dest-card reveal col-span-2 row-span-2"
+              onclick="showPage('destinations')"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1609198092458-38a293c7ac4b?w=900&q=80"
+                alt="Hunza"
+                style="height: 520px"
+              />
+              <div class="dest-overlay"></div>
+              <div class="absolute bottom-6 left-6 text-white">
+                <div class="section-label text-gold-300 mb-1">
+                  Northern Pakistan
+                </div>
+                <h3 class="font-display text-3xl font-semibold">
+                  Hunza Valley
+                </h3>
+                <p class="text-white/70 text-sm mt-1">32 tours available</p>
+              </div>
+            </div>
+            <div class="dest-card reveal" onclick="showPage('destinations')">
+              <img
+                src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&q=80"
+                alt="Fairy Meadows"
+              />
+              <div class="dest-overlay"></div>
+              <div class="absolute bottom-4 left-4 text-white">
+                <h3 class="font-display text-xl font-semibold">
+                  Fairy Meadows
+                </h3>
+                <p class="text-white/60 text-xs mt-0.5">12 tours</p>
+              </div>
+            </div>
+            <div class="dest-card reveal" onclick="showPage('destinations')">
+              <img
+                src="https://plus.unsplash.com/premium_photo-1697730198247-ed3c72ecf932?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D?w=600&q=80"
+                alt="Skardu"
+              />
+              <div class="dest-overlay"></div>
+              <div class="absolute bottom-4 left-4 text-white">
+                <h3 class="font-display text-xl font-semibold">Skardu</h3>
+                <p class="text-white/60 text-xs mt-0.5">18 tours</p>
+              </div>
+            </div>
+            <div class="dest-card reveal" onclick="showPage('destinations')">
+              <img
+                src="https://images.unsplash.com/photo-1617128072203-310a93722ad8?q=80&w=2137&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D?w=600&q=80"
+                alt="Lahore"
+              />
+              <div class="dest-overlay"></div>
+              <div class="absolute bottom-4 left-4 text-white">
+                <h3 class="font-display text-xl font-semibold">Lahore</h3>
+                <p class="text-white/60 text-xs mt-0.5">24 tours</p>
+              </div>
+            </div>
+            <div class="dest-card reveal" onclick="showPage('destinations')">
+              <img
+                src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=600&q=80"
+                alt="Swat Valley"
+              />
+              <div class="dest-overlay"></div>
+              <div class="absolute bottom-4 left-4 text-white">
+                <h3 class="font-display text-xl font-semibold">Swat Valley</h3>
+                <p class="text-white/60 text-xs mt-0.5">16 tours</p>
+              </div>
+            </div>
+          </div>
+          <div class="text-center mt-10 reveal">
+            <button onclick="showPage('destinations')" class="btn-dark">
+              Explore All Destinations →
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- WHY CHOOSE US -->
+      <section class="py-24 px-6 pattern-bg">
+        <div class="max-w-7xl mx-auto">
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div class="reveal">
+              <div class="section-label mb-4">Why Mega Tours</div>
+              <h2
+                class="section-title text-4xl md:text-5xl text-forest-900 mb-6"
+              >
+                Pakistan's Most Trusted Travel Partner
+              </h2>
+              <p class="section-serif text-lg text-gray-600 italic mb-8">
+                For over 15 years, we've been crafting extraordinary travel
+                experiences that connect you to the real Pakistan — its people,
+                landscapes, and stories.
+              </p>
+              <div class="space-y-6">
+                <div class="flex gap-4">
+                  <div class="feature-icon">🛡️</div>
+                  <div>
+                    <h4 class="font-semibold text-forest-900 mb-1">
+                      100% Safe & Secure
+                    </h4>
+                    <p class="text-gray-500 text-sm leading-relaxed">
+                      All our tours are covered by comprehensive travel
+                      insurance and safety protocols. Your well-being is our top
+                      priority.
+                    </p>
+                  </div>
+                </div>
+                <div class="flex gap-4">
+                  <div class="feature-icon">🌿</div>
+                  <div>
+                    <h4 class="font-semibold text-forest-900 mb-1">
+                      Eco-Responsible Travel
+                    </h4>
+                    <p class="text-gray-500 text-sm leading-relaxed">
+                      We partner with local communities and practice sustainable
+                      tourism to preserve Pakistan's natural heritage.
+                    </p>
+                  </div>
+                </div>
+                <div class="flex gap-4">
+                  <div class="feature-icon">👨‍🏫</div>
+                  <div>
+                    <h4 class="font-semibold text-forest-900 mb-1">
+                      Expert Local Guides
+                    </h4>
+                    <p class="text-gray-500 text-sm leading-relaxed">
+                      Our certified guides are passionate locals with deep
+                      knowledge of their regions, history, and culture.
+                    </p>
+                  </div>
+                </div>
+                <div class="flex gap-4">
+                  <div class="feature-icon">💰</div>
+                  <div>
+                    <h4 class="font-semibold text-forest-900 mb-1">
+                      Best Price Guarantee
+                    </h4>
+                    <p class="text-gray-500 text-sm leading-relaxed">
+                      Find it cheaper elsewhere? We'll match the price — no
+                      questions asked. Great experiences shouldn't cost a
+                      fortune.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="reveal">
+              <div class="relative">
+                <img
+                  src="https://images.unsplash.com/photo-1609198092458-38a293c7ac4b?w=700&q=80"
+                  alt="Pakistan Mountains"
+                  class="rounded-2xl shadow-2xl w-full object-cover"
+                  style="height: 520px"
+                />
+                <div
+                  class="absolute -bottom-6 -left-6 bg-forest-900 text-white rounded-2xl p-6 shadow-xl"
+                  style="max-width: 220px"
+                >
+                  <div class="text-4xl font-display font-bold text-gold-300">
+                    4.9★
+                  </div>
+                  <div class="text-sm text-white/70 mt-1">
+                    Average rating from 2,400+ verified reviews
+                  </div>
+                </div>
+                <div
+                  class="absolute -top-6 -right-6 bg-gradient-to-br from-gold-400 to-gold-300 text-forest-950 rounded-2xl p-5 shadow-xl text-center"
+                >
+                  <div class="text-3xl font-display font-bold">15+</div>
+                  <div
+                    class="text-xs font-semibold uppercase tracking-wide mt-0.5"
+                  >
+                    Years of<br />Excellence
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- TESTIMONIALS -->
+      <section class="py-24 px-6 bg-white">
+        <div class="max-w-7xl mx-auto">
+          <div class="text-center mb-14 reveal">
+            <div class="section-label mb-3">Traveler Stories</div>
+            <h2 class="section-title text-4xl text-forest-900">
+              What Our Guests Say
+            </h2>
+            <div class="gold-divider w-24 mx-auto mt-6"></div>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="testimonial-card reveal">
+              <div class="stars mb-4">★★★★★</div>
+              <p class="section-serif text-lg italic text-gray-700 mb-5">
+                "The Hunza Valley tour was absolutely life-changing. Mega Tours
+                arranged everything perfectly — the hotels, guides, and
+                activities were all top-notch."
+              </p>
+              <div class="flex items-center gap-3">
+                <div
+                  class="w-12 h-12 rounded-full bg-gradient-to-br from-forest-400 to-forest-700 flex items-center justify-center text-white font-bold text-lg"
+                >
+                  A
+                </div>
+                <div>
+                  <div class="font-semibold text-forest-900">Ahmed Raza</div>
+                  <div class="text-xs text-gray-400">Karachi, Pakistan</div>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-card reveal">
+              <div class="stars mb-4">★★★★★</div>
+              <p class="section-serif text-lg italic text-gray-700 mb-5">
+                "We did the K2 Base Camp trek with Mega Tours and it exceeded
+                every expectation. The guides were knowledgeable and genuinely
+                passionate about the mountains."
+              </p>
+              <div class="flex items-center gap-3">
+                <div
+                  class="w-12 h-12 rounded-full bg-gradient-to-br from-gold-400 to-gold-600 flex items-center justify-center text-white font-bold text-lg"
+                >
+                  S
+                </div>
+                <div>
+                  <div class="font-semibold text-forest-900">
+                    Sarah Mitchell
+                  </div>
+                  <div class="text-xs text-gray-400">London, UK</div>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-card reveal">
+              <div class="stars mb-4">★★★★☆</div>
+              <p class="section-serif text-lg italic text-gray-700 mb-5">
+                "Lahore's food tour was incredible! Mega Tours showed us the
+                authentic side of the city that tourists rarely see. The team
+                was warm and professional."
+              </p>
+              <div class="flex items-center gap-3">
+                <div
+                  class="w-12 h-12 rounded-full bg-gradient-to-br from-forest-200 to-forest-500 flex items-center justify-center text-white font-bold text-lg"
+                >
+                  F
+                </div>
+                <div>
+                  <div class="font-semibold text-forest-900">Fatima Khan</div>
+                  <div class="text-xs text-gray-400">Dubai, UAE</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- NEWSLETTER -->
+      <section
+        class="py-20 px-6"
+        style="
+          background: linear-gradient(135deg, var(--forest) 0%, #1a3d22 100%);
+        "
+      >
+        <div class="max-w-2xl mx-auto text-center text-white reveal">
+          <div class="text-5xl mb-4">✉️</div>
+          <h2 class="section-title text-3xl md:text-4xl mb-3">
+            Get Exclusive Travel Deals
+          </h2>
+          <p class="text-white/70 mb-8 section-serif text-lg italic">
+            Subscribe to our newsletter and be the first to know about special
+            offers, new destinations, and travel tips.
+          </p>
+          <div class="flex gap-3 max-w-md mx-auto">
+            <input
+              type="email"
+              placeholder="Enter your email address"
+              class="form-input flex-1"
+            />
+            <button class="btn-primary whitespace-nowrap">Subscribe</button>
+          </div>
+          <p class="text-white/40 text-xs mt-4">
+            No spam. Unsubscribe anytime.
+          </p>
+        </div>
+      </section>
+
+      <!-- FOOTER -->
+      <footer class="py-16 px-6">
+        <div class="max-w-7xl mx-auto">
+          <div class="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
+            <div>
+              <div class="flex items-center gap-3 mb-4">
+                <div
+                  class="w-10 h-10 rounded-full bg-gradient-to-br from-gold-300 to-gold-500 flex items-center justify-center text-forest-950 font-bold text-lg"
+                >
+                  M
+                </div>
+                <div>
+                  <div class="font-display text-white text-lg font-semibold">
+                    MEGA TOURS
+                  </div>
+                  <div class="text-gold-300 text-xs tracking-widest">
+                    PAKISTAN
+                  </div>
+                </div>
+              </div>
+              <p class="text-white/50 text-sm leading-relaxed mb-5">
+                Pakistan's premier travel company, crafting unforgettable
+                journeys since 2009. Explore the world's most spectacular
+                destination.
+              </p>
+              <div class="flex gap-3">
+                <a
+                  href="#"
+                  class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center text-white/70 hover:bg-gold-500 hover:text-forest-950 transition-all text-sm"
+                  >f</a
+                >
+                <a
+                  href="#"
+                  class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center text-white/70 hover:bg-gold-500 hover:text-forest-950 transition-all text-sm"
+                  >𝕏</a
+                >
+                <a
+                  href="#"
+                  class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center text-white/70 hover:bg-gold-500 hover:text-forest-950 transition-all text-sm"
+                  >in</a
+                >
+                <a
+                  href="#"
+                  class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center text-white/70 hover:bg-gold-500 hover:text-forest-950 transition-all text-sm"
+                  >▶</a
+                >
+              </div>
+            </div>
+            <div>
+              <h4
+                class="text-white font-semibold mb-4 text-sm tracking-wider uppercase"
+              >
+                Quick Links
+              </h4>
+              <div class="space-y-2">
+                <button
+                  onclick="showPage('home')"
+                  class="block text-white/50 hover:text-gold-300 text-sm transition-colors"
+                >
+                  Home
+                </button>
+                <button
+                  onclick="showPage('tours')"
+                  class="block text-white/50 hover:text-gold-300 text-sm transition-colors"
+                >
+                  Tours & Packages
+                </button>
+                <button
+                  onclick="showPage('destinations')"
+                  class="block text-white/50 hover:text-gold-300 text-sm transition-colors"
+                >
+                  Destinations
+                </button>
+                <button
+                  onclick="showPage('gallery')"
+                  class="block text-white/50 hover:text-gold-300 text-sm transition-colors"
+                >
+                  Photo Gallery
+                </button>
+                <button
+                  onclick="showPage('about')"
+                  class="block text-white/50 hover:text-gold-300 text-sm transition-colors"
+                >
+                  About Us
+                </button>
+                <button
+                  onclick="showPage('contact')"
+                  class="block text-white/50 hover:text-gold-300 text-sm transition-colors"
+                >
+                  Contact Us
+                </button>
+              </div>
+            </div>
+            <div>
+              <h4
+                class="text-white font-semibold mb-4 text-sm tracking-wider uppercase"
+              >
+                Popular Tours
+              </h4>
+              <div class="space-y-2">
+                <button
+                  onclick="showPage('tours')"
+                  class="block text-white/50 hover:text-gold-300 text-sm transition-colors"
+                >
+                  Hunza Valley Explorer
+                </button>
+                <button
+                  onclick="showPage('tours')"
+                  class="block text-white/50 hover:text-gold-300 text-sm transition-colors"
+                >
+                  K2 Base Camp Trek
+                </button>
+                <button
+                  onclick="showPage('tours')"
+                  class="block text-white/50 hover:text-gold-300 text-sm transition-colors"
+                >
+                  Lahore Heritage Trail
+                </button>
+                <button
+                  onclick="showPage('tours')"
+                  class="block text-white/50 hover:text-gold-300 text-sm transition-colors"
+                >
+                  Fairy Meadows Adventure
+                </button>
+                <button
+                  onclick="showPage('tours')"
+                  class="block text-white/50 hover:text-gold-300 text-sm transition-colors"
+                >
+                  Skardu & Deosai
+                </button>
+              </div>
+            </div>
+            <div>
+              <h4
+                class="text-white font-semibold mb-4 text-sm tracking-wider uppercase"
+              >
+                Contact Us
+              </h4>
+              <div class="space-y-3 text-white/50 text-sm">
+                <div class="flex gap-2">
+                  <span>📍</span
+                  ><span>Block 7, Clifton, Karachi, Pakistan</span>
+                </div>
+                <div class="flex gap-2">
+                  <span>📞</span><span>+92 300 1234567</span>
+                </div>
+                <div class="flex gap-2">
+                  <span>✉️</span><span>info@megatours.pk</span>
+                </div>
+                <div class="flex gap-2">
+                  <span>🕐</span><span>Mon–Sat: 9:00 AM – 7:00 PM</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-white/30 text-sm"
+          >
+            <span>© 2025 Mega Tours Pakistan. All rights reserved.</span>
+            <div class="flex gap-6">
+              <a href="#" class="hover:text-gold-300 transition-colors"
+                >Privacy Policy</a
+              >
+              <a href="#" class="hover:text-gold-300 transition-colors"
+                >Terms of Service</a
+              >
+              <a href="#" class="hover:text-gold-300 transition-colors"
+                >Sitemap</a
+              >
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <!-- ========================= TOURS PAGE ========================= -->
+    <div id="page-tours" class="page">
+      <!-- Page Hero -->
+      <div
+        class="page-hero"
+        style="
+          background-image: url(&quot;https://images.unsplash.com/photo-1586500036706-41963de24d8b?w=1600&q=80&quot;);
+        "
+      >
+        <div class="page-hero-overlay"></div>
+        <div class="relative z-10 max-w-7xl mx-auto px-6 text-white">
+          <div class="section-label text-gold-300 mb-2">All Packages</div>
+          <h1 class="hero-title text-5xl md:text-6xl">Tour Packages</h1>
+          <p class="section-serif text-xl text-white/80 mt-3 italic">
+            Over 120 curated Pakistan travel experiences
+          </p>
+        </div>
+      </div>
+
+      <!-- Filters -->
+      <div
+        class="bg-white border-b border-gray-100 sticky top-[72px] z-50 shadow-sm"
+      >
+        <div
+          class="max-w-7xl mx-auto px-6 py-4 flex flex-wrap gap-3 items-center"
+        >
+          <span
+            class="text-xs font-semibold text-gray-500 uppercase tracking-wider mr-2"
+            >Filter:</span
+          >
+          <button
+            class="badge badge-gold filter-btn active-filter"
+            onclick="filterTours('all', this)"
+          >
+            All Tours
+          </button>
+          <button
+            class="badge badge-outline filter-btn"
+            onclick="filterTours('adventure', this)"
+          >
+            Adventure
+          </button>
+          <button
+            class="badge badge-outline filter-btn"
+            onclick="filterTours('heritage', this)"
+          >
+            Heritage
+          </button>
+          <button
+            class="badge badge-outline filter-btn"
+            onclick="filterTours('nature', this)"
+          >
+            Nature
+          </button>
+          <button
+            class="badge badge-outline filter-btn"
+            onclick="filterTours('family', this)"
+          >
+            Family
+          </button>
+          <button
+            class="badge badge-outline filter-btn"
+            onclick="filterTours('luxury', this)"
+          >
+            Luxury
+          </button>
+          <div class="ml-auto">
+            <select class="form-input py-2 text-sm" style="width: auto">
+              <option>Sort: Popularity</option>
+              <option>Sort: Price Low–High</option>
+              <option>Sort: Price High–Low</option>
+              <option>Sort: Duration</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tours Grid -->
+      <div class="max-w-7xl mx-auto px-6 py-16" id="tours-grid">
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          id="tours-container"
+        >
+          <div class="tour-card" data-category="adventure">
+            <div class="relative overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1609198092458-38a293c7ac4b?w=800&q=80"
+                alt="Hunza Valley"
+              />
+              <div class="ribbon">Best Seller</div>
+              <div class="absolute bottom-3 left-3">
+                <span class="badge badge-gold">7 Days</span>
+              </div>
+            </div>
+            <div class="p-6">
+              <div class="flex justify-between items-start mb-2">
+                <h3 class="font-display font-semibold text-lg text-forest-900">
+                  Hunza Valley Explorer
+                </h3>
+                <div class="stars text-sm">★★★★★</div>
+              </div>
+              <p class="text-gray-500 text-sm mb-4 leading-relaxed">
+                Explore turquoise Attabad Lake, ancient Baltit Fort, and the
+                breathtaking Karakoram Highway.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-5 text-xs text-gray-400">
+                <span>✈️ Flights</span><span>•</span><span>🏨 Hotel</span
+                ><span>•</span><span>🍽️ Meals</span><span>•</span
+                ><span>🚌 Transport</span>
+              </div>
+              <div class="flex items-center justify-between">
+                <div>
+                  <span class="text-xs text-gray-400 line-through"
+                    >PKR 145,000</span
+                  ><br /><span class="text-2xl font-bold text-forest-700"
+                    >PKR 120,000</span
+                  ><span class="text-xs text-gray-400">/person</span>
+                </div>
+                <button
+                  class="btn-primary text-xs py-2.5 px-5"
+                  onclick="openBooking('Hunza Valley Explorer', 'PKR 120,000')"
+                >
+                  Book Now
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="tour-card" data-category="adventure">
+            <div class="relative overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1586500036706-41963de24d8b?w=800&q=80"
+                alt="K2 Trek"
+              />
+              <div
+                class="ribbon"
+                style="
+                  background: linear-gradient(135deg, #183320, #265530);
+                  color: #fff;
+                "
+              >
+                New 2025
+              </div>
+              <div class="absolute bottom-3 left-3">
+                <span class="badge badge-green">10 Days</span>
+              </div>
+            </div>
+            <div class="p-6">
+              <div class="flex justify-between items-start mb-2">
+                <h3 class="font-display font-semibold text-lg text-forest-900">
+                  K2 Base Camp Trek
+                </h3>
+                <div class="stars text-sm">★★★★★</div>
+              </div>
+              <p class="text-gray-500 text-sm mb-4 leading-relaxed">
+                The ultimate Karakoram adventure — trek through Concordia to the
+                base of K2 at 5,150m.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-5 text-xs text-gray-400">
+                <span>🧗 Guide</span><span>•</span><span>⛺ Camping</span
+                ><span>•</span><span>🍽️ Meals</span><span>•</span
+                ><span>🐴 Porters</span>
+              </div>
+              <div class="flex items-center justify-between">
+                <div>
+                  <span class="text-xs text-gray-400 line-through"
+                    >PKR 280,000</span
+                  ><br /><span class="text-2xl font-bold text-forest-700"
+                    >PKR 240,000</span
+                  ><span class="text-xs text-gray-400">/person</span>
+                </div>
+                <button
+                  class="btn-primary text-xs py-2.5 px-5"
+                  onclick="openBooking('K2 Base Camp Trek', 'PKR 240,000')"
+                >
+                  Book Now
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="tour-card" data-category="heritage">
+            <div class="relative overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1617128072203-310a93722ad8?q=80&w=2137&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D?w=800&q=80"
+                alt="Lahore"
+              />
+              <div class="absolute bottom-3 left-3">
+                <span class="badge badge-gold">5 Days</span>
+              </div>
+            </div>
+            <div class="p-6">
+              <div class="flex justify-between items-start mb-2">
+                <h3 class="font-display font-semibold text-lg text-forest-900">
+                  Lahore Heritage Trail
+                </h3>
+                <div class="stars text-sm">★★★★☆</div>
+              </div>
+              <p class="text-gray-500 text-sm mb-4 leading-relaxed">
+                Mughal forts, mosques, bazaars, and the legendary Lahore food
+                scene on one immersive tour.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-5 text-xs text-gray-400">
+                <span>🏛️ Heritage</span><span>•</span><span>🍛 Food</span
+                ><span>•</span><span>🏨 5-Star</span><span>•</span
+                ><span>🚌 Transport</span>
+              </div>
+              <div class="flex items-center justify-between">
+                <div>
+                  <span class="text-xs text-gray-400 line-through"
+                    >PKR 85,000</span
+                  ><br /><span class="text-2xl font-bold text-forest-700"
+                    >PKR 70,000</span
+                  ><span class="text-xs text-gray-400">/person</span>
+                </div>
+                <button
+                  class="btn-primary text-xs py-2.5 px-5"
+                  onclick="openBooking('Lahore Heritage Trail', 'PKR 70,000')"
+                >
+                  Book Now
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="tour-card" data-category="nature">
+            <div class="relative overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80"
+                alt="Fairy Meadows"
+              />
+              <div class="absolute bottom-3 left-3">
+                <span class="badge badge-gold">6 Days</span>
+              </div>
+            </div>
+            <div class="p-6">
+              <div class="flex justify-between items-start mb-2">
+                <h3 class="font-display font-semibold text-lg text-forest-900">
+                  Fairy Meadows & Nanga Parbat
+                </h3>
+                <div class="stars text-sm">★★★★★</div>
+              </div>
+              <p class="text-gray-500 text-sm mb-4 leading-relaxed">
+                Camp at the base of Nanga Parbat and wake up to the most
+                spectacular mountain views on Earth.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-5 text-xs text-gray-400">
+                <span>⛺ Camping</span><span>•</span><span>🏔️ Views</span
+                ><span>•</span><span>🍽️ Meals</span><span>•</span
+                ><span>🧗 Trekking</span>
+              </div>
+              <div class="flex items-center justify-between">
+                <div>
+                  <span class="text-2xl font-bold text-forest-700"
+                    >PKR 95,000</span
+                  ><span class="text-xs text-gray-400">/person</span>
+                </div>
+                <button
+                  class="btn-primary text-xs py-2.5 px-5"
+                  onclick="openBooking('Fairy Meadows Package', 'PKR 95,000')"
+                >
+                  Book Now
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="tour-card" data-category="nature">
+            <div class="relative overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1668239329227-7da2835db76e?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D?w=800&q=80"
+                alt="Skardu"
+              />
+              <div class="ribbon">Popular</div>
+              <div class="absolute bottom-3 left-3">
+                <span class="badge badge-gold">8 Days</span>
+              </div>
+            </div>
+            <div class="p-6">
+              <div class="flex justify-between items-start mb-2">
+                <h3 class="font-display font-semibold text-lg text-forest-900">
+                  Skardu & Deosai Plains
+                </h3>
+                <div class="stars text-sm">★★★★★</div>
+              </div>
+              <p class="text-gray-500 text-sm mb-4 leading-relaxed">
+                The world's second highest plateau — Deosai National Park,
+                Sheosar Lake, and Skardu Fort.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-5 text-xs text-gray-400">
+                <span>🏔️ Plateau</span><span>•</span><span>🦅 Wildlife</span
+                ><span>•</span><span>🏨 Resorts</span><span>•</span
+                ><span>🍽️ Meals</span>
+              </div>
+              <div class="flex items-center justify-between">
+                <div>
+                  <span class="text-2xl font-bold text-forest-700"
+                    >PKR 135,000</span
+                  ><span class="text-xs text-gray-400">/person</span>
+                </div>
+                <button
+                  class="btn-primary text-xs py-2.5 px-5"
+                  onclick="openBooking('Skardu & Deosai', 'PKR 135,000')"
+                >
+                  Book Now
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="tour-card" data-category="family">
+            <div class="relative overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800&q=80"
+                alt="Swat Valley"
+              />
+              <div class="absolute bottom-3 left-3">
+                <span class="badge badge-gold">5 Days</span>
+              </div>
+            </div>
+            <div class="p-6">
+              <div class="flex justify-between items-start mb-2">
+                <h3 class="font-display font-semibold text-lg text-forest-900">
+                  Swat Valley Family Escape
+                </h3>
+                <div class="stars text-sm">★★★★☆</div>
+              </div>
+              <p class="text-gray-500 text-sm mb-4 leading-relaxed">
+                Pakistan's Switzerland — lush meadows, rivers, and ancient
+                Buddhist sites perfect for all ages.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-5 text-xs text-gray-400">
+                <span>👨‍👩‍👧 Family</span><span>•</span><span>🏞️ Nature</span
+                ><span>•</span><span>🏨 Hotels</span><span>•</span
+                ><span>🚌 Transport</span>
+              </div>
+              <div class="flex items-center justify-between">
+                <div>
+                  <span class="text-2xl font-bold text-forest-700"
+                    >PKR 65,000</span
+                  ><span class="text-xs text-gray-400">/person</span>
+                </div>
+                <button
+                  class="btn-primary text-xs py-2.5 px-5"
+                  onclick="
+                    openBooking('Swat Valley Family Escape', 'PKR 65,000')
+                  "
+                >
+                  Book Now
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="tour-card" data-category="luxury">
+            <div class="relative overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80"
+                alt="Luxury Tour"
+              />
+              <div
+                class="ribbon"
+                style="
+                  background: linear-gradient(135deg, #112214, #1a3d22);
+                  color: #f5b800;
+                "
+              >
+                VIP
+              </div>
+              <div class="absolute bottom-3 left-3">
+                <span class="badge badge-gold">14 Days</span>
+              </div>
+            </div>
+            <div class="p-6">
+              <div class="flex justify-between items-start mb-2">
+                <h3 class="font-display font-semibold text-lg text-forest-900">
+                  Grand Pakistan Luxury Tour
+                </h3>
+                <div class="stars text-sm">★★★★★</div>
+              </div>
+              <p class="text-gray-500 text-sm mb-4 leading-relaxed">
+                The ultimate Pakistan experience — from Lahore's grandeur to
+                Hunza's peaks in 5-star style.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-5 text-xs text-gray-400">
+                <span>✈️ Business Class</span><span>•</span
+                ><span>🏨 5-Star</span><span>•</span><span>🍽️ Fine Dining</span>
+              </div>
+              <div class="flex items-center justify-between">
+                <div>
+                  <span class="text-2xl font-bold text-forest-700"
+                    >PKR 450,000</span
+                  ><span class="text-xs text-gray-400">/person</span>
+                </div>
+                <button
+                  class="btn-primary text-xs py-2.5 px-5"
+                  onclick="
+                    openBooking('Grand Pakistan Luxury Tour', 'PKR 450,000')
+                  "
+                >
+                  Book Now
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="tour-card" data-category="heritage">
+            <div class="relative overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=800&q=80"
+                alt="Mohenjo-Daro"
+              />
+              <div class="absolute bottom-3 left-3">
+                <span class="badge badge-gold">3 Days</span>
+              </div>
+            </div>
+            <div class="p-6">
+              <div class="flex justify-between items-start mb-2">
+                <h3 class="font-display font-semibold text-lg text-forest-900">
+                  Mohenjo-Daro Archaeological Tour
+                </h3>
+                <div class="stars text-sm">★★★★☆</div>
+              </div>
+              <p class="text-gray-500 text-sm mb-4 leading-relaxed">
+                Walk through one of the world's oldest cities — a UNESCO World
+                Heritage site from 2500 BCE.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-5 text-xs text-gray-400">
+                <span>🏛️ UNESCO</span><span>•</span><span>📚 Expert Guide</span
+                ><span>•</span><span>🏨 Hotel</span>
+              </div>
+              <div class="flex items-center justify-between">
+                <div>
+                  <span class="text-2xl font-bold text-forest-700"
+                    >PKR 45,000</span
+                  ><span class="text-xs text-gray-400">/person</span>
+                </div>
+                <button
+                  class="btn-primary text-xs py-2.5 px-5"
+                  onclick="openBooking('Mohenjo-Daro Tour', 'PKR 45,000')"
+                >
+                  Book Now
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="tour-card" data-category="nature">
+            <div class="relative overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1551632811-561732d1e306?w=800&q=80"
+                alt="Neelum Valley"
+              />
+              <div class="absolute bottom-3 left-3">
+                <span class="badge badge-gold">7 Days</span>
+              </div>
+            </div>
+            <div class="p-6">
+              <div class="flex justify-between items-start mb-2">
+                <h3 class="font-display font-semibold text-lg text-forest-900">
+                  Neelum Valley AJK Tour
+                </h3>
+                <div class="stars text-sm">★★★★★</div>
+              </div>
+              <p class="text-gray-500 text-sm mb-4 leading-relaxed">
+                Azure rivers, dense forests, and charming valley villages in
+                Azad Jammu & Kashmir.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-5 text-xs text-gray-400">
+                <span>🏞️ Rivers</span><span>•</span><span>🌲 Forests</span
+                ><span>•</span><span>🏨 Hotels</span><span>•</span
+                ><span>🍽️ Meals</span>
+              </div>
+              <div class="flex items-center justify-between">
+                <div>
+                  <span class="text-2xl font-bold text-forest-700"
+                    >PKR 88,000</span
+                  ><span class="text-xs text-gray-400">/person</span>
+                </div>
+                <button
+                  class="btn-primary text-xs py-2.5 px-5"
+                  onclick="openBooking('Neelum Valley Tour', 'PKR 88,000')"
+                >
+                  Book Now
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Booking Modal -->
+      <div
+        id="booking-modal"
+        style="
+          display: none;
+          position: fixed;
+          inset: 0;
+          z-index: 9000;
+          background: rgba(0, 0, 0, 0.6);
+          align-items: center;
+          justify-content: center;
+        "
+      >
+        <div
+          class="bg-white rounded-2xl p-8 max-w-md w-full mx-4 shadow-2xl"
+          style="max-height: 90vh; overflow-y: auto"
+        >
+          <div class="flex justify-between items-start mb-6">
+            <div>
+              <h3
+                class="font-display text-xl font-semibold text-forest-900"
+                id="modal-tour-name"
+              >
+                Tour Name
+              </h3>
+              <div class="text-gold-500 font-bold mt-1" id="modal-tour-price">
+                PKR 0
+              </div>
+            </div>
+            <button
+              onclick="closeBooking()"
+              class="text-gray-400 hover:text-gray-600 text-2xl leading-none"
+            >
+              ✕
+            </button>
+          </div>
+          <div class="space-y-4">
+            <div>
+              <label class="form-label">Full Name</label
+              ><input
+                type="text"
+                class="form-input"
+                placeholder="Your full name"
+              />
+            </div>
+            <div>
+              <label class="form-label">Email</label
+              ><input
+                type="email"
+                class="form-input"
+                placeholder="your@email.com"
+              />
+            </div>
+            <div>
+              <label class="form-label">Phone</label
+              ><input
+                type="tel"
+                class="form-input"
+                placeholder="+92 300 0000000"
+              />
+            </div>
+            <div>
+              <label class="form-label">No. of Travelers</label
+              ><select class="form-input">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5+</option>
+              </select>
+            </div>
+            <div>
+              <label class="form-label">Preferred Date</label
+              ><input type="date" class="form-input" />
+            </div>
+            <div>
+              <label class="form-label">Special Requests</label
+              ><textarea
+                class="form-input"
+                rows="3"
+                placeholder="Any special requirements..."
+              ></textarea>
+            </div>
+            <button
+              onclick="submitBooking()"
+              class="btn-primary w-full text-center"
+            >
+              Confirm Booking Request
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <footer class="py-10 px-6 bg-forest-950">
+        <div class="max-w-7xl mx-auto text-center text-white/40 text-sm">
+          <p>
+            © 2025 Mega Tours Pakistan. All rights reserved. |
+            <button
+              onclick="showPage('home')"
+              class="hover:text-gold-300 transition-colors"
+            >
+              Back to Home
+            </button>
+          </p>
+        </div>
+      </footer>
+    </div>
+
+    <!-- ========================= DESTINATIONS PAGE ========================= -->
+    <div id="page-destinations" class="page">
+      <div
+        class="page-hero"
+        style="
+          background-image: url(&quot;https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1600&q=80&quot;);
+        "
+      >
+        <div class="page-hero-overlay"></div>
+        <div class="relative z-10 max-w-7xl mx-auto px-6 text-white">
+          <div class="section-label text-gold-300 mb-2">Explore Pakistan</div>
+          <h1 class="hero-title text-5xl md:text-6xl">Destinations</h1>
+          <p class="section-serif text-xl text-white/80 mt-3 italic">
+            50+ incredible destinations across Pakistan
+          </p>
+        </div>
+      </div>
+
+      <div class="max-w-7xl mx-auto px-6 py-16">
+        <!-- North Pakistan -->
+        <div class="mb-16">
+          <div class="flex items-center gap-4 mb-8">
+            <div class="section-label">Northern Pakistan</div>
+            <div
+              class="flex-1 h-px bg-gradient-to-r from-gold-400 to-transparent"
+            ></div>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="dest-card">
+              <img
+                src="https://images.unsplash.com/photo-1609198092458-38a293c7ac4b?w=700&q=80"
+                alt="Hunza Valley"
+              />
+              <div class="dest-overlay"></div>
+              <div class="absolute bottom-5 left-5 text-white">
+                <h3 class="font-display text-2xl font-semibold">
+                  Hunza Valley
+                </h3>
+                <p class="text-white/70 text-sm mt-1">
+                  Gilgit-Baltistan • 32 tours
+                </p>
+                <div class="mt-3 flex gap-2 flex-wrap">
+                  <span class="badge badge-gold text-xs">Trekking</span>
+                  <span
+                    class="badge"
+                    style="
+                      background: rgba(255, 255, 255, 0.2);
+                      color: #fff;
+                      font-size: 0.65rem;
+                      padding: 3px 10px;
+                      border-radius: 100px;
+                    "
+                    >Heritage</span
+                  >
+                </div>
+              </div>
+              <div class="absolute top-4 right-4">
+                <button
+                  onclick="showPage('tours')"
+                  class="btn-primary text-xs py-2 px-4"
+                >
+                  View Tours
+                </button>
+              </div>
+            </div>
+
+            <div class="dest-card">
+              <img
+                src="https://images.unsplash.com/photo-1703182186928-c536061bf1b6?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D?w=700&q=80"
+                alt="Skardu"
+              />
+              <div class="dest-overlay"></div>
+              <div class="absolute bottom-5 left-5 text-white">
+                <h3 class="font-display text-2xl font-semibold">Skardu</h3>
+                <p class="text-white/70 text-sm mt-1">
+                  Gilgit-Baltistan • 18 tours
+                </p>
+                <div class="mt-3 flex gap-2 flex-wrap">
+                  <span class="badge badge-gold text-xs">Lakes</span>
+                  <span
+                    class="badge"
+                    style="
+                      background: rgba(255, 255, 255, 0.2);
+                      color: #fff;
+                      font-size: 0.65rem;
+                      padding: 3px 10px;
+                      border-radius: 100px;
+                    "
+                    >Adventure</span
+                  >
+                </div>
+              </div>
+              <div class="absolute top-4 right-4">
+                <button
+                  onclick="showPage('tours')"
+                  class="btn-primary text-xs py-2 px-4"
+                >
+                  View Tours
+                </button>
+              </div>
+            </div>
+
+            <div class="dest-card">
+              <img
+                src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=700&q=80"
+                alt="Fairy Meadows"
+              />
+              <div class="dest-overlay"></div>
+              <div class="absolute bottom-5 left-5 text-white">
+                <h3 class="font-display text-2xl font-semibold">
+                  Fairy Meadows
+                </h3>
+                <p class="text-white/70 text-sm mt-1">Diamer, KPK • 12 tours</p>
+                <div class="mt-3 flex gap-2 flex-wrap">
+                  <span class="badge badge-gold text-xs">Camping</span>
+                  <span
+                    class="badge"
+                    style="
+                      background: rgba(255, 255, 255, 0.2);
+                      color: #fff;
+                      font-size: 0.65rem;
+                      padding: 3px 10px;
+                      border-radius: 100px;
+                    "
+                    >Mountains</span
+                  >
+                </div>
+              </div>
+              <div class="absolute top-4 right-4">
+                <button
+                  onclick="showPage('tours')"
+                  class="btn-primary text-xs py-2 px-4"
+                >
+                  View Tours
+                </button>
+              </div>
+            </div>
+
+            <div class="dest-card">
+              <img
+                src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=700&q=80"
+                alt="Swat Valley"
+              />
+              <div class="dest-overlay"></div>
+              <div class="absolute bottom-5 left-5 text-white">
+                <h3 class="font-display text-2xl font-semibold">Swat Valley</h3>
+                <p class="text-white/70 text-sm mt-1">
+                  Khyber Pakhtunkhwa • 16 tours
+                </p>
+                <div class="mt-3 flex gap-2 flex-wrap">
+                  <span class="badge badge-gold text-xs">Family</span>
+                  <span
+                    class="badge"
+                    style="
+                      background: rgba(255, 255, 255, 0.2);
+                      color: #fff;
+                      font-size: 0.65rem;
+                      padding: 3px 10px;
+                      border-radius: 100px;
+                    "
+                    >Nature</span
+                  >
+                </div>
+              </div>
+              <div class="absolute top-4 right-4">
+                <button
+                  onclick="showPage('tours')"
+                  class="btn-primary text-xs py-2 px-4"
+                >
+                  View Tours
+                </button>
+              </div>
+            </div>
+
+            <div class="dest-card">
+              <img
+                src="https://images.unsplash.com/photo-1551632811-561732d1e306?w=700&q=80"
+                alt="Neelum Valley"
+              />
+              <div class="dest-overlay"></div>
+              <div class="absolute bottom-5 left-5 text-white">
+                <h3 class="font-display text-2xl font-semibold">
+                  Neelum Valley
+                </h3>
+                <p class="text-white/70 text-sm mt-1">
+                  Azad Kashmir • 14 tours
+                </p>
+                <div class="mt-3 flex gap-2 flex-wrap">
+                  <span class="badge badge-gold text-xs">Rivers</span>
+                  <span
+                    class="badge"
+                    style="
+                      background: rgba(255, 255, 255, 0.2);
+                      color: #fff;
+                      font-size: 0.65rem;
+                      padding: 3px 10px;
+                      border-radius: 100px;
+                    "
+                    >Scenic</span
+                  >
+                </div>
+              </div>
+              <div class="absolute top-4 right-4">
+                <button
+                  onclick="showPage('tours')"
+                  class="btn-primary text-xs py-2 px-4"
+                >
+                  View Tours
+                </button>
+              </div>
+            </div>
+
+            <div class="dest-card">
+              <img
+                src="https://images.unsplash.com/photo-1586500036706-41963de24d8b?w=700&q=80"
+                alt="Karakoram"
+              />
+              <div class="dest-overlay"></div>
+              <div class="absolute bottom-5 left-5 text-white">
+                <h3 class="font-display text-2xl font-semibold">
+                  Karakoram Highway
+                </h3>
+                <p class="text-white/70 text-sm mt-1">GB / KPK • 10 tours</p>
+                <div class="mt-3 flex gap-2 flex-wrap">
+                  <span class="badge badge-gold text-xs">Road Trip</span>
+                  <span
+                    class="badge"
+                    style="
+                      background: rgba(255, 255, 255, 0.2);
+                      color: #fff;
+                      font-size: 0.65rem;
+                      padding: 3px 10px;
+                      border-radius: 100px;
+                    "
+                    >Scenic</span
+                  >
+                </div>
+              </div>
+              <div class="absolute top-4 right-4">
+                <button
+                  onclick="showPage('tours')"
+                  class="btn-primary text-xs py-2 px-4"
+                >
+                  View Tours
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Cultural / Heritage -->
+        <div class="mb-16">
+          <div class="flex items-center gap-4 mb-8">
+            <div class="section-label">Cultural & Heritage</div>
+            <div
+              class="flex-1 h-px bg-gradient-to-r from-gold-400 to-transparent"
+            ></div>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="dest-card">
+              <img
+                src="https://plus.unsplash.com/premium_photo-1697729448930-6b2187ac9ee4?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D?w=700&q=80"
+                alt="Lahore"
+              />
+              <div class="dest-overlay"></div>
+              <div class="absolute bottom-5 left-5 text-white">
+                <h3 class="font-display text-2xl font-semibold">Lahore</h3>
+                <p class="text-white/70 text-sm mt-1">Punjab • 24 tours</p>
+                <div class="mt-3 flex gap-2">
+                  <span class="badge badge-gold text-xs">UNESCO</span
+                  ><span
+                    class="badge"
+                    style="
+                      background: rgba(255, 255, 255, 0.2);
+                      color: #fff;
+                      font-size: 0.65rem;
+                      padding: 3px 10px;
+                      border-radius: 100px;
+                    "
+                    >Food</span
+                  >
+                </div>
+              </div>
+              <div class="absolute top-4 right-4">
+                <button
+                  onclick="showPage('tours')"
+                  class="btn-primary text-xs py-2 px-4"
+                >
+                  View Tours
+                </button>
+              </div>
+            </div>
+
+            <div class="dest-card">
+              <img
+                src="https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=700&q=80"
+                alt="Mohenjo-Daro"
+              />
+              <div class="dest-overlay"></div>
+              <div class="absolute bottom-5 left-5 text-white">
+                <h3 class="font-display text-2xl font-semibold">
+                  Mohenjo-Daro
+                </h3>
+                <p class="text-white/70 text-sm mt-1">Sindh • 8 tours</p>
+                <div class="mt-3 flex gap-2">
+                  <span class="badge badge-gold text-xs">UNESCO</span
+                  ><span
+                    class="badge"
+                    style="
+                      background: rgba(255, 255, 255, 0.2);
+                      color: #fff;
+                      font-size: 0.65rem;
+                      padding: 3px 10px;
+                      border-radius: 100px;
+                    "
+                    >History</span
+                  >
+                </div>
+              </div>
+              <div class="absolute top-4 right-4">
+                <button
+                  onclick="showPage('tours')"
+                  class="btn-primary text-xs py-2 px-4"
+                >
+                  View Tours
+                </button>
+              </div>
+            </div>
+
+            <div class="dest-card">
+              <img
+                src="https://images.unsplash.com/photo-1564507592333-c60657eea523?w=700&q=80"
+                alt="Peshawar"
+              />
+              <div class="dest-overlay"></div>
+              <div class="absolute bottom-5 left-5 text-white">
+                <h3 class="font-display text-2xl font-semibold">Peshawar</h3>
+                <p class="text-white/70 text-sm mt-1">
+                  Khyber Pakhtunkhwa • 10 tours
+                </p>
+                <div class="mt-3 flex gap-2">
+                  <span class="badge badge-gold text-xs">Ancient</span
+                  ><span
+                    class="badge"
+                    style="
+                      background: rgba(255, 255, 255, 0.2);
+                      color: #fff;
+                      font-size: 0.65rem;
+                      padding: 3px 10px;
+                      border-radius: 100px;
+                    "
+                    >Culture</span
+                  >
+                </div>
+              </div>
+              <div class="absolute top-4 right-4">
+                <button
+                  onclick="showPage('tours')"
+                  class="btn-primary text-xs py-2 px-4"
+                >
+                  View Tours
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer class="py-10 px-6 bg-forest-950">
+        <div class="max-w-7xl mx-auto text-center text-white/40 text-sm">
+          <p>
+            © 2025 Mega Tours Pakistan |
+            <button onclick="showPage('home')" class="hover:text-gold-300">
+              Back to Home
+            </button>
+          </p>
+        </div>
+      </footer>
+    </div>
+
+    <!-- ========================= GALLERY PAGE ========================= -->
+    <div id="page-gallery" class="page">
+      <div
+        class="page-hero"
+        style="
+          background-image: url(&quot;https://images.unsplash.com/photo-1551632811-561732d1e306?w=1600&q=80&quot;);
+        "
+      >
+        <div class="page-hero-overlay"></div>
+        <div class="relative z-10 max-w-7xl mx-auto px-6 text-white">
+          <div class="section-label text-gold-300 mb-2">Visual Journey</div>
+          <h1 class="hero-title text-5xl md:text-6xl">Photo Gallery</h1>
+          <p class="section-serif text-xl text-white/80 mt-3 italic">
+            A glimpse of Pakistan's breathtaking beauty
+          </p>
+        </div>
+      </div>
+
+      <div class="max-w-7xl mx-auto px-6 py-16">
+        <!-- Filter tabs -->
+        <div class="flex flex-wrap gap-3 mb-10">
+          <button
+            class="badge badge-gold gallery-filter active-filter"
+            onclick="filterGallery('all', this)"
+          >
+            All Photos
+          </button>
+          <button
+            class="badge badge-outline gallery-filter"
+            onclick="filterGallery('mountains', this)"
+          >
+            Mountains
+          </button>
+          <button
+            class="badge badge-outline gallery-filter"
+            onclick="filterGallery('culture', this)"
+          >
+            Culture
+          </button>
+          <button
+            class="badge badge-outline gallery-filter"
+            onclick="filterGallery('nature', this)"
+          >
+            Nature & Lakes
+          </button>
+          <button
+            class="badge badge-outline gallery-filter"
+            onclick="filterGallery('cities', this)"
+          >
+            Cities
+          </button>
+        </div>
+
+        <!-- Masonry-like grid -->
+        <div
+          class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4"
+          id="gallery-grid"
+        >
+          <div
+            class="gallery-item col-span-2 row-span-2 h-80"
+            data-cat="mountains"
+            onclick="
+              openLightbox(
+                'https://images.unsplash.com/photo-1609198092458-38a293c7ac4b?w=1200&q=90',
+              )
+            "
+          >
+            <img
+              src="https://images.unsplash.com/photo-1609198092458-38a293c7ac4b?w=800&q=80"
+              alt="Hunza"
+              class="h-80 w-full"
+            />
+          </div>
+          <div
+            class="gallery-item h-36"
+            data-cat="mountains"
+            onclick="
+              openLightbox(
+                'https://images.unsplash.com/photo-1586500036706-41963de24d8b?w=1200&q=90',
+              )
+            "
+          >
+            <img
+              src="https://images.unsplash.com/photo-1586500036706-41963de24d8b?w=500&q=80"
+              alt="K2"
+              class="h-36 w-full"
+            />
+          </div>
+          <div
+            class="gallery-item h-36"
+            data-cat="culture"
+            onclick="
+              openLightbox(
+                'https://images.unsplash.com/photo-1567351151282-dfae7d397345?w=1200&q=90',
+              )
+            "
+          >
+            <img
+              src="https://plus.unsplash.com/premium_photo-1697729448930-6b2187ac9ee4?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D?w=500&q=80"
+              alt="Lahore"
+              class="h-36 w-full"
+            />
+          </div>
+          <div
+            class="gallery-item h-36"
+            data-cat="mountains"
+            onclick="
+              openLightbox(
+                'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&q=90',
+              )
+            "
+          >
+            <img
+              src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=500&q=80"
+              alt="Fairy Meadows"
+              class="h-36 w-full"
+            />
+          </div>
+          <div
+            class="gallery-item h-36"
+            data-cat="nature"
+            onclick="
+              openLightbox(
+                'https://images.unsplash.com/photo-1595974379285-6e4b1ff4c00b?w=1200&q=90',
+              )
+            "
+          >
+            <img
+              src="https://images.unsplash.com/photo-1703182186928-c536061bf1b6?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D?w=500&q=80"
+              alt="Skardu"
+              class="h-36 w-full"
+            />
+          </div>
+          <div
+            class="gallery-item h-48"
+            data-cat="nature"
+            onclick="
+              openLightbox(
+                'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1200&q=90',
+              )
+            "
+          >
+            <img
+              src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=500&q=80"
+              alt="Swat"
+              class="h-48 w-full"
+            />
+          </div>
+          <div
+            class="gallery-item h-48"
+            data-cat="mountains"
+            onclick="
+              openLightbox(
+                'https://images.unsplash.com/photo-1551632811-561732d1e306?w=1200&q=90',
+              )
+            "
+          >
+            <img
+              src="https://images.unsplash.com/photo-1551632811-561732d1e306?w=500&q=80"
+              alt="Neelum"
+              class="h-48 w-full"
+            />
+          </div>
+          <div
+            class="gallery-item h-48 col-span-2"
+            data-cat="culture"
+            onclick="
+              openLightbox(
+                'https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=90',
+              )
+            "
+          >
+            <img
+              src="https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=800&q=80"
+              alt="Heritage"
+              class="h-48 w-full"
+            />
+          </div>
+          <div
+            class="gallery-item h-56"
+            data-cat="cities"
+            onclick="
+              openLightbox(
+                'https://images.unsplash.com/photo-1564507592333-c60657eea523?w=1200&q=90',
+              )
+            "
+          >
+            <img
+              src="https://images.unsplash.com/photo-1564507592333-c60657eea523?w=500&q=80"
+              alt="Peshawar"
+              class="h-56 w-full"
+            />
+          </div>
+          <div
+            class="gallery-item h-56"
+            data-cat="mountains"
+            onclick="
+              openLightbox(
+                'https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=90',
+              )
+            "
+          >
+            <img
+              src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=500&q=80"
+              alt="Resort"
+              class="h-56 w-full"
+            />
+          </div>
+          <div
+            class="gallery-item h-56 col-span-2"
+            data-cat="mountains"
+            onclick="
+              openLightbox(
+                'https://images.unsplash.com/photo-1586500036706-41963de24d8b?w=1400&q=90',
+              )
+            "
+          >
+            <img
+              src="https://images.unsplash.com/photo-1586500036706-41963de24d8b?w=900&q=80"
+              alt="Mountains"
+              class="h-56 w-full"
+            />
+          </div>
+        </div>
+      </div>
+
+      <footer class="py-10 px-6 bg-forest-950">
+        <div class="max-w-7xl mx-auto text-center text-white/40 text-sm">
+          <p>
+            © 2025 Mega Tours Pakistan |
+            <button onclick="showPage('home')" class="hover:text-gold-300">
+              Back to Home
+            </button>
+          </p>
+        </div>
+      </footer>
+    </div>
+
+    <!-- ========================= ABOUT PAGE ========================= -->
+    <div id="page-about" class="page">
+      <div
+        class="page-hero"
+        style="
+          background-image: url(&quot;https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1600&q=80&quot;);
+        "
+      >
+        <div class="page-hero-overlay"></div>
+        <div class="relative z-10 max-w-7xl mx-auto px-6 text-white">
+          <div class="section-label text-gold-300 mb-2">Who We Are</div>
+          <h1 class="hero-title text-5xl md:text-6xl">About Mega Tours</h1>
+          <p class="section-serif text-xl text-white/80 mt-3 italic">
+            15 years of extraordinary journeys
+          </p>
+        </div>
+      </div>
+
+      <!-- Story Section -->
+      <section class="py-24 px-6 bg-white">
+        <div
+          class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center"
+        >
+          <div>
+            <div class="section-label mb-4">Our Story</div>
+            <h2 class="section-title text-4xl text-forest-900 mb-6">
+              Born from a Love of Pakistan
+            </h2>
+            <div class="gold-divider w-20 mb-8"></div>
+            <p class="section-serif text-lg italic text-gray-600 mb-5">
+              Founded in 2009 by a team of passionate Pakistani adventurers,
+              Mega Tours began with a single mission: to share the extraordinary
+              beauty of Pakistan with the world.
+            </p>
+            <p class="text-gray-600 text-sm leading-relaxed mb-5">
+              What started as a small trekking company in Gilgit has grown into
+              Pakistan's most trusted travel brand, with offices in Karachi,
+              Lahore, Islamabad, and Gilgit. We've helped over 5,000 travelers
+              discover the wonders of Pakistan — from the ancient ruins of
+              Mohenjo-Daro to the icy peaks of the Karakoram.
+            </p>
+            <p class="text-gray-600 text-sm leading-relaxed">
+              Every tour we design is crafted with meticulous care, balancing
+              adventure and comfort, local authenticity and international
+              standards. We believe in responsible tourism that benefits local
+              communities and preserves Pakistan's natural and cultural heritage
+              for generations to come.
+            </p>
+            <div class="mt-8 grid grid-cols-3 gap-6">
+              <div class="text-center p-4 rounded-xl bg-forest-50">
+                <div class="text-3xl font-display font-bold text-forest-700">
+                  2009
+                </div>
+                <div class="text-xs text-gray-500 mt-1 uppercase tracking-wide">
+                  Founded
+                </div>
+              </div>
+              <div class="text-center p-4 rounded-xl bg-gold-50">
+                <div class="text-3xl font-display font-bold text-gold-600">
+                  5K+
+                </div>
+                <div class="text-xs text-gray-500 mt-1 uppercase tracking-wide">
+                  Travelers
+                </div>
+              </div>
+              <div class="text-center p-4 rounded-xl bg-forest-50">
+                <div class="text-3xl font-display font-bold text-forest-700">
+                  4.9
+                </div>
+                <div class="text-xs text-gray-500 mt-1 uppercase tracking-wide">
+                  Rating
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="grid grid-cols-2 gap-4">
+            <img
+              src="https://images.unsplash.com/photo-1609198092458-38a293c7ac4b?w=500&q=80"
+              alt="Hunza"
+              class="rounded-2xl object-cover h-56 w-full shadow-lg"
+            />
+            <img
+              src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=500&q=80"
+              alt="Mountains"
+              class="rounded-2xl object-cover h-56 w-full shadow-lg mt-8"
+            />
+            <img
+              src="https://plus.unsplash.com/premium_photo-1697729448930-6b2187ac9ee4?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D?w=500&q=80"
+              alt="Lahore"
+              class="rounded-2xl object-cover h-56 w-full shadow-lg -mt-4"
+            />
+            <img
+              src="https://images.unsplash.com/photo-1703182186928-c536061bf1b6?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D?w=500&q=80"
+              alt="Skardu"
+              class="rounded-2xl object-cover h-56 w-full shadow-lg mt-4"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- Team -->
+      <section class="py-20 px-6 pattern-bg">
+        <div class="max-w-7xl mx-auto">
+          <div class="text-center mb-14">
+            <div class="section-label mb-3">The People</div>
+            <h2 class="section-title text-4xl text-forest-900">
+              Meet Our Team
+            </h2>
+            <div class="gold-divider w-24 mx-auto mt-6"></div>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div
+              class="bg-white rounded-2xl overflow-hidden shadow-lg text-center"
+            >
+              <div
+                class="h-48 bg-gradient-to-br from-forest-400 to-forest-700 flex items-center justify-center text-7xl"
+              >
+                👨‍💼
+              </div>
+              <div class="p-5">
+                <h4 class="font-display font-semibold text-forest-900">
+                  Adil ASlam
+                </h4>
+                <div
+                  class="text-xs text-gold-600 font-semibold uppercase tracking-wider mt-1 mb-2"
+                >
+                  Founder & CEO
+                </div>
+                <p class="text-gray-500 text-xs leading-relaxed">
+                  15+ years guiding expeditions across the Karakoram and
+                  Himalayan ranges.
+                </p>
+              </div>
+            </div>
+            <div
+              class="bg-white rounded-2xl overflow-hidden shadow-lg text-center"
+            >
+              <div
+                class="h-48 bg-gradient-to-br from-gold-400 to-gold-600 flex items-center justify-center text-7xl"
+              >
+                👩‍💼
+              </div>
+              <div class="p-5">
+                <h4 class="font-display font-semibold text-forest-900">
+                  Aaliyan Aslam
+                </h4>
+                <div
+                  class="text-xs text-gold-600 font-semibold uppercase tracking-wider mt-1 mb-2"
+                >
+                  Head of Operations
+                </div>
+                <p class="text-gray-500 text-xs leading-relaxed">
+                  Expert in luxury travel logistics with a passion for
+                  sustainable tourism.
+                </p>
+              </div>
+            </div>
+            <div
+              class="bg-white rounded-2xl overflow-hidden shadow-lg text-center"
+            >
+              <div
+                class="h-48 bg-gradient-to-br from-forest-300 to-forest-500 flex items-center justify-center text-7xl"
+              >
+                🧗
+              </div>
+              <div class="p-5">
+                <h4 class="font-display font-semibold text-forest-900">
+                  Talha Ahmad
+                </h4>
+                <div
+                  class="text-xs text-gold-600 font-semibold uppercase tracking-wider mt-1 mb-2"
+                >
+                  Lead Trek Guide
+                </div>
+                <p class="text-gray-500 text-xs leading-relaxed">
+                  Certified mountaineer with 200+ successful high-altitude treks
+                  to his name.
+                </p>
+              </div>
+            </div>
+            <div
+              class="bg-white rounded-2xl overflow-hidden shadow-lg text-center"
+            >
+              <div
+                class="h-48 bg-gradient-to-br from-gold-200 to-gold-400 flex items-center justify-center text-7xl"
+              >
+                🏛️
+              </div>
+              <div class="p-5">
+                <h4 class="font-display font-semibold text-forest-900">
+                  Ayan Aslam
+                </h4>
+                <div
+                  class="text-xs text-gold-600 font-semibold uppercase tracking-wider mt-1 mb-2"
+                >
+                  Heritage Tour Specialist
+                </div>
+                <p class="text-gray-500 text-xs leading-relaxed">
+                  Archaeologist and cultural historian specializing in South
+                  Asian heritage.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section class="py-20 px-6 bg-white">
+        <div class="max-w-3xl mx-auto">
+          <div class="text-center mb-12">
+            <div class="section-label mb-3">Common Questions</div>
+            <h2 class="section-title text-4xl text-forest-900">FAQs</h2>
+            <div class="gold-divider w-24 mx-auto mt-6"></div>
+          </div>
+          <div id="faq-list">
+            <div class="faq-item">
+              <button class="faq-question" onclick="toggleFaq(this)">
+                <span>What is included in your tour packages?</span>
+                <span class="faq-icon">+</span>
+              </button>
+              <div class="faq-answer pb-4 text-gray-500">
+                Our packages typically include accommodation, meals as
+                specified, ground transportation, professional guides, and park
+                entry fees. Flights are included in select packages. Each tour
+                page clearly outlines what's included and excluded.
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" onclick="toggleFaq(this)">
+                <span>Is Pakistan safe for tourists?</span>
+                <span class="faq-icon">+</span>
+              </button>
+              <div class="faq-answer pb-4 text-gray-500">
+                Pakistan is a welcoming and largely safe destination for
+                tourists, particularly in the northern areas and major cities.
+                We continuously monitor security conditions and work with local
+                authorities to ensure our travelers' safety. Our guides are
+                trained in first aid and emergency protocols.
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" onclick="toggleFaq(this)">
+                <span>What is the best time to visit Pakistan?</span>
+                <span class="faq-icon">+</span>
+              </button>
+              <div class="faq-answer pb-4 text-gray-500">
+                The ideal time depends on your destination. For northern areas
+                (Hunza, Skardu), April–June and September–October offer the best
+                weather. For cultural tours of Lahore and Islamabad,
+                October–March is most comfortable. We offer year-round packages
+                tailored to each season.
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" onclick="toggleFaq(this)">
+                <span>Do I need a visa to visit Pakistan?</span>
+                <span class="faq-icon">+</span>
+              </button>
+              <div class="faq-answer pb-4 text-gray-500">
+                Most nationalities require a visa to visit Pakistan. Pakistan
+                now offers e-visa for visitors from many countries, making the
+                process straightforward. Our team can advise on visa
+                requirements for your specific nationality and assist with
+                documentation.
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" onclick="toggleFaq(this)">
+                <span>Can I customize my tour package?</span>
+                <span class="faq-icon">+</span>
+              </button>
+              <div class="faq-answer pb-4 text-gray-500">
+                Absolutely! All our tours can be customized to suit your
+                preferences, budget, and schedule. Contact our team to discuss a
+                bespoke itinerary tailored specifically for you or your group.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer class="py-10 px-6 bg-forest-950">
+        <div class="max-w-7xl mx-auto text-center text-white/40 text-sm">
+          <p>
+            © 2025 Mega Tours Pakistan |
+            <button onclick="showPage('home')" class="hover:text-gold-300">
+              Back to Home
+            </button>
+          </p>
+        </div>
+      </footer>
+    </div>
+
+    <!-- ========================= CONTACT PAGE ========================= -->
+    <div id="page-contact" class="page">
+      <div
+        class="page-hero"
+        style="
+          background-image: url(&quot;https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1600&q=80&quot;);
+        "
+      >
+        <div class="page-hero-overlay"></div>
+        <div class="relative z-10 max-w-7xl mx-auto px-6 text-white">
+          <div class="section-label text-gold-300 mb-2">Get in Touch</div>
+          <h1 class="hero-title text-5xl md:text-6xl">Contact Us</h1>
+          <p class="section-serif text-xl text-white/80 mt-3 italic">
+            We'd love to plan your perfect Pakistan adventure
+          </p>
+        </div>
+      </div>
+
+      <section class="py-24 px-6">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-12">
+          <!-- Contact Info -->
+          <div>
+            <div class="section-label mb-4">Reach Us</div>
+            <h2 class="section-title text-3xl text-forest-900 mb-8">
+              Let's Plan Your Journey
+            </h2>
+            <div class="space-y-6">
+              <div class="flex gap-4 items-start">
+                <div
+                  class="w-12 h-12 rounded-xl bg-forest-800 text-gold-300 flex items-center justify-center text-xl flex-shrink-0"
+                >
+                  📍
+                </div>
+                <div>
+                  <h4 class="font-semibold text-forest-900 mb-1">
+                    Main Office
+                  </h4>
+                  <p class="text-gray-500 text-sm">
+                    Block 7, Clifton, Karachi 75600<br />Sindh, Pakistan
+                  </p>
+                </div>
+              </div>
+              <div class="flex gap-4 items-start">
+                <div
+                  class="w-12 h-12 rounded-xl bg-forest-800 text-gold-300 flex items-center justify-center text-xl flex-shrink-0"
+                >
+                  📞
+                </div>
+                <div>
+                  <h4 class="font-semibold text-forest-900 mb-1">
+                    Phone & WhatsApp
+                  </h4>
+                  <p class="text-gray-500 text-sm">
+                    +92 300 1234567<br />+92 21 1234 5678 (Office)
+                  </p>
+                </div>
+              </div>
+              <div class="flex gap-4 items-start">
+                <div
+                  class="w-12 h-12 rounded-xl bg-forest-800 text-gold-300 flex items-center justify-center text-xl flex-shrink-0"
+                >
+                  ✉️
+                </div>
+                <div>
+                  <h4 class="font-semibold text-forest-900 mb-1">Email</h4>
+                  <p class="text-gray-500 text-sm">
+                    info@megatours.pk<br />bookings@megatours.pk
+                  </p>
+                </div>
+              </div>
+              <div class="flex gap-4 items-start">
+                <div
+                  class="w-12 h-12 rounded-xl bg-forest-800 text-gold-300 flex items-center justify-center text-xl flex-shrink-0"
+                >
+                  🕐
+                </div>
+                <div>
+                  <h4 class="font-semibold text-forest-900 mb-1">
+                    Office Hours
+                  </h4>
+                  <p class="text-gray-500 text-sm">
+                    Monday – Saturday<br />9:00 AM – 7:00 PM (PST)
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Office locations -->
+            <div class="mt-10 p-6 bg-forest-50 rounded-2xl">
+              <h4 class="font-display font-semibold text-forest-900 mb-4">
+                Our Offices
+              </h4>
+              <div class="space-y-3 text-sm text-gray-600">
+                <div class="flex justify-between">
+                  <span class="font-medium">Karachi HQ</span
+                  ><span class="text-green-600">● Open</span>
+                </div>
+                <div class="flex justify-between">
+                  <span class="font-medium">Lahore Branch</span
+                  ><span class="text-green-600">● Open</span>
+                </div>
+                <div class="flex justify-between">
+                  <span class="font-medium">Islamabad Branch</span
+                  ><span class="text-green-600">● Open</span>
+                </div>
+                <div class="flex justify-between">
+                  <span class="font-medium">Gilgit Office</span
+                  ><span class="text-green-600">● Open</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Contact Form -->
+          <div class="lg:col-span-2">
+            <div
+              class="bg-white rounded-2xl p-8 shadow-xl border border-gray-100"
+            >
+              <h3
+                class="font-display text-2xl font-semibold text-forest-900 mb-6"
+              >
+                Send Us a Message
+              </h3>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                <div>
+                  <label class="form-label">First Name</label>
+                  <input
+                    type="text"
+                    class="form-input"
+                    placeholder="Ahmed"
+                    id="cf-first"
+                  />
+                </div>
+                <div>
+                  <label class="form-label">Last Name</label>
+                  <input
+                    type="text"
+                    class="form-input"
+                    placeholder="Khan"
+                    id="cf-last"
+                  />
+                </div>
+                <div>
+                  <label class="form-label">Email Address</label>
+                  <input
+                    type="email"
+                    class="form-input"
+                    placeholder="ahmed@email.com"
+                    id="cf-email"
+                  />
+                </div>
+                <div>
+                  <label class="form-label">Phone Number</label>
+                  <input
+                    type="tel"
+                    class="form-input"
+                    placeholder="+92 300 0000000"
+                    id="cf-phone"
+                  />
+                </div>
+                <div>
+                  <label class="form-label">Interested In</label>
+                  <select class="form-input" id="cf-interest">
+                    <option>Select a tour type</option>
+                    <option>Adventure Tours</option>
+                    <option>Heritage & Culture</option>
+                    <option>Nature Tours</option>
+                    <option>Family Packages</option>
+                    <option>Luxury Tours</option>
+                    <option>Custom Itinerary</option>
+                  </select>
+                </div>
+                <div>
+                  <label class="form-label">No. of Travelers</label>
+                  <select class="form-input" id="cf-travelers">
+                    <option>1 Person</option>
+                    <option>2 People</option>
+                    <option>3–5 People</option>
+                    <option>6–10 People</option>
+                    <option>10+ People (Group)</option>
+                  </select>
+                </div>
+                <div class="md:col-span-2">
+                  <label class="form-label">Preferred Destination</label>
+                  <select class="form-input" id="cf-dest">
+                    <option>Not sure yet / Let us suggest</option>
+                    <option>Hunza Valley</option>
+                    <option>Skardu</option>
+                    <option>K2 Base Camp</option>
+                    <option>Fairy Meadows</option>
+                    <option>Lahore</option>
+                    <option>Swat Valley</option>
+                    <option>Neelum Valley</option>
+                    <option>Mohenjo-Daro</option>
+                    <option>Multiple Destinations</option>
+                  </select>
+                </div>
+                <div class="md:col-span-2">
+                  <label class="form-label">Your Message</label>
+                  <textarea
+                    class="form-input"
+                    rows="4"
+                    id="cf-message"
+                    placeholder="Tell us about your dream Pakistan adventure — dates, budget, special requests..."
+                  ></textarea>
+                </div>
+              </div>
+              <div class="mt-6 flex flex-col sm:flex-row gap-4 items-center">
+                <button
+                  onclick="submitContactForm()"
+                  class="btn-primary w-full sm:w-auto"
+                >
+                  Send Message →
+                </button>
+                <p class="text-xs text-gray-400">
+                  We respond within 24 hours. Your data is never shared.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Map-like decorative section -->
+      <div
+        class="h-80 relative overflow-hidden"
+        style="background: linear-gradient(135deg, #183320 0%, #1a3d22 100%)"
+      >
+        <div class="absolute inset-0 flex items-center justify-center">
+          <div class="text-center text-white">
+            <div class="text-6xl mb-4">🗺️</div>
+            <h3 class="font-display text-3xl font-semibold text-white mb-2">
+              Visit Our Office
+            </h3>
+            <p class="text-white/60 section-serif italic text-lg">
+              Block 7, Clifton, Karachi, Pakistan
+            </p>
+            <a
+              href="https://maps.google.com"
+              target="_blank"
+              class="btn-primary mt-6 inline-block"
+              >Open in Maps →</a
+            >
+          </div>
+        </div>
+        <!-- Decorative dots -->
+        <div
+          style="
+            position: absolute;
+            inset: 0;
+            background-image: radial-gradient(
+              circle,
+              rgba(245, 184, 0, 0.15) 1px,
+              transparent 1px
+            );
+            background-size: 30px 30px;
+          "
+        ></div>
+      </div>
+
+      <footer class="py-16 px-6 bg-forest-950">
+        <div class="max-w-7xl mx-auto">
+          <div class="text-center text-white/40 text-sm">
+            <p>
+              © 2025 Mega Tours Pakistan. All rights reserved. |
+              <button
+                onclick="showPage('home')"
+                class="hover:text-gold-300 transition-colors"
+              >
+                Back to Home
+              </button>
+            </p>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <!-- ========================= JAVASCRIPT ========================= -->
+    <script>
+      // ---- PAGE NAVIGATION ----
+      function showPage(pageId) {
+        document
+          .querySelectorAll(".page")
+          .forEach((p) => p.classList.remove("active"));
+        document.getElementById("page-" + pageId).classList.add("active");
+        document
+          .querySelectorAll(".nav-link")
+          .forEach((l) => l.classList.remove("active"));
+        const navEl = document.getElementById("nav-" + pageId);
+        if (navEl) navEl.classList.add("active");
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
+
+      // ---- MOBILE MENU ----
+      function toggleMobile() {
+        const menu = document.getElementById("mobile-menu");
+        menu.classList.toggle("open");
+        document.getElementById("hamburger").textContent =
+          menu.classList.contains("open") ? "✕" : "☰";
+      }
+
+      // ---- NAVBAR SCROLL ----
+      window.addEventListener("scroll", () => {
+        const nav = document.getElementById("navbar");
+        if (window.scrollY > 60) {
+          nav.classList.add("scrolled");
+        } else {
+          nav.classList.remove("scrolled");
+        }
+      });
+
+      // ---- HERO SLIDESHOW ----
+      const slides = document.querySelectorAll(".slide");
+      const dotsContainer = document.getElementById("slide-dots");
+      let currentSlide = 0;
+
+      slides.forEach((_, i) => {
+        const dot = document.createElement("button");
+        dot.className =
+          "w-2 h-2 rounded-full transition-all " +
+          (i === 0 ? "bg-white w-6" : "bg-white/40");
+        dot.onclick = () => goToSlide(i);
+        dotsContainer.appendChild(dot);
+      });
+
+      function goToSlide(n) {
+        slides[currentSlide].classList.remove("active");
+        dotsContainer.children[currentSlide].className =
+          "w-2 h-2 rounded-full transition-all bg-white/40";
+        currentSlide = n;
+        slides[currentSlide].classList.add("active");
+        dotsContainer.children[currentSlide].className =
+          "w-2 h-2 rounded-full transition-all bg-white" + " " + "w-6";
+        dotsContainer.children[currentSlide].style.width = "24px";
+      }
+
+      setInterval(() => {
+        goToSlide((currentSlide + 1) % slides.length);
+      }, 5000);
+
+      // ---- SCROLL REVEAL ----
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((e) => {
+            if (e.isIntersecting) {
+              e.target.classList.add("visible");
+            }
+          });
+        },
+        { threshold: 0.12 },
+      );
+      document
+        .querySelectorAll(".reveal")
+        .forEach((el) => observer.observe(el));
+
+      // ---- TOUR FILTER ----
+      function filterTours(cat, btn) {
+        document.querySelectorAll(".filter-btn").forEach((b) => {
+          b.className = b.className
+            .replace("badge-gold", "badge-outline")
+            .replace(" active-filter", "");
+        });
+        btn.className =
+          btn.className.replace("badge-outline", "badge-gold") +
+          " active-filter";
+        document
+          .querySelectorAll("#tours-container .tour-card")
+          .forEach((card) => {
+            card.style.display =
+              cat === "all" || card.dataset.category === cat ? "block" : "none";
+          });
+      }
+
+      // ---- GALLERY FILTER ----
+      function filterGallery(cat, btn) {
+        document.querySelectorAll(".gallery-filter").forEach((b) => {
+          b.className = b.className
+            .replace("badge-gold", "badge-outline")
+            .replace(" active-filter", "");
+        });
+        btn.className =
+          btn.className.replace("badge-outline", "badge-gold") +
+          " active-filter";
+        document
+          .querySelectorAll("#gallery-grid .gallery-item")
+          .forEach((item) => {
+            item.style.display =
+              cat === "all" || item.dataset.cat === cat ? "block" : "none";
+          });
+      }
+
+      // ---- LIGHTBOX ----
+      function openLightbox(src) {
+        document.getElementById("lightbox-img").src = src;
+        document.getElementById("lightbox").classList.add("open");
+        document.body.style.overflow = "hidden";
+      }
+      function closeLightbox() {
+        document.getElementById("lightbox").classList.remove("open");
+        document.body.style.overflow = "";
+      }
+
+      // ---- BOOKING MODAL ----
+      function openBooking(name, price) {
+        document.getElementById("modal-tour-name").textContent = name;
+        document.getElementById("modal-tour-price").textContent =
+          price + " / person";
+        const modal = document.getElementById("booking-modal");
+        modal.style.display = "flex";
+        document.body.style.overflow = "hidden";
+      }
+      function closeBooking() {
+        document.getElementById("booking-modal").style.display = "none";
+        document.body.style.overflow = "";
+      }
+      function submitBooking() {
+        closeBooking();
+        showToast(
+          "🎉 Booking request submitted! We'll call you within 2 hours.",
+        );
+      }
+
+      // ---- CONTACT FORM ----
+      function submitContactForm() {
+        const name = document.getElementById("cf-first").value;
+        if (!name) {
+          alert("Please fill in your name.");
+          return;
+        }
+        showToast("✓ Message sent! We'll contact you within 24 hours.");
+      }
+
+      // ---- TOAST ----
+      function showToast(msg) {
+        const t = document.getElementById("toast");
+        t.textContent = msg;
+        t.classList.add("show");
+        setTimeout(() => t.classList.remove("show"), 4000);
+      }
+
+      // ---- FAQ ACCORDION ----
+      function toggleFaq(btn) {
+        const item = btn.closest(".faq-item");
+        const answer = item.querySelector(".faq-answer");
+        const isOpen = answer.classList.contains("open");
+        document
+          .querySelectorAll(".faq-answer")
+          .forEach((a) => a.classList.remove("open"));
+        document
+          .querySelectorAll(".faq-item")
+          .forEach((i) => i.classList.remove("open"));
+        if (!isOpen) {
+          answer.classList.add("open");
+          item.classList.add("open");
+        }
+      }
+
+      // ---- ACTIVE NAV on load ----
+      document.getElementById("nav-home").classList.add("active");
+    </script>
+  </body>
+</html>
